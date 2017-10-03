@@ -745,3 +745,26 @@
   INFO [6f5d35b3] Running /usr/bin/env echo "Branch develop (at e9974e623b9176520fa6ee22622ae4ef45681466) deployed as release 20170925063505 by yogesh" >> /usr/share/nginx/www-data/revisions.log as deploy@172.17.0.2
  DEBUG [6f5d35b3] Command: cd /usr/share/nginx/www-data/releases && /usr/bin/env echo "Branch develop (at e9974e623b9176520fa6ee22622ae4ef45681466) deployed as release 20170925063505 by yogesh" >> /usr/share/nginx/www-data/revisions.log
   INFO [6f5d35b3] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-03 13:08:56 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b03bb46c] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.2
+ DEBUG [b03bb46c] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-03 13:09:45 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [cc850793] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.2
+ DEBUG [cc850793] Command: /usr/bin/env mkdir -p /tmp
+  INFO [cc850793] Finished in 0.372 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-production-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-production-yogesh.sh 100.0%
+  INFO [684a8cff] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-production-yogesh.sh as deploy@172.17.0.2
+ DEBUG [684a8cff] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-production-yogesh.sh
+  INFO [684a8cff] Finished in 0.010 seconds with exit status 0 (successful).
+  INFO [8329c371] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-example.git HEAD as deploy@172.17.0.2
+ DEBUG [8329c371] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-production-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-example.git HEAD )
+ DEBUG [8329c371] 	ERROR: Repository not found.
+ DEBUG [8329c371] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.

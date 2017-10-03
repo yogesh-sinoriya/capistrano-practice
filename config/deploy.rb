@@ -7,7 +7,7 @@ set :default_stage, "production"
 set :ssh_options, {:forward_agent => true}
 
 set :application, 'capistrano_example'
-set :repo_url, 'git@github.com:yogesh-sinoriya/capistrano-example.git'
+set :repo_url, 'git@github.com:yogesh-sinoriya/capistrano-practice.git'
 set :user, "deploy"
 
 set :linked_dirs, %w(my_shared_directory)
