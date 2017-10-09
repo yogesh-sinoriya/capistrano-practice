@@ -12,10 +12,6 @@ set :user, "deploy"
 
 set :linked_dirs, %w(node_modules)
 
-set :npm_target_path, '/home/deploy/dev/nodeapp/current/' #-> { release_path.join('/home/deploy/dev/nodeapp') } # default not set
-# set :npm_flags, '--production --silent --no-progress'    # default
-# set :npm_roles, :all                                     # default
-# set :npm_env_variables, {}                               # default
 
 namespace :deploy do
 
@@ -33,21 +29,30 @@ namespace :npm do
 	desc 'Start'
     task :start do
       on roles(:app), in: :groups, limit:1 do
-        execute :npm, :start, fetch(:app_command)
+      	execute "cd /home/deploy/dev/nodeapp/current/ && npm start"
+        #execute :npm, :start, fetch(:app_command)
       end
     end
 
     desc 'Restart'
     task :restart do
       on roles(:app), in: :groups, limit:1 do
-        execute "cd #{npm_target_path} && ./node_modules/.bin/forever start app.js"
+        execute "cd /home/deploy/dev/nodeapp/current/ && npm restart"
         #execute :npm,:restart, fetch(:app_command)
       end
     end
     desc 'Stop'
     task :stop do
       on roles(:app), in: :groups, limit:1 do
-        execute :npm, :stop, fetch(:app_command)
+      	execute "cd /home/deploy/dev/nodeapp/current/ && npm stop"
+        #execute :npm, :stop, fetch(:app_command)
+      end
+    end
+    desc 'StopAll'
+    task :stopall do
+      on roles(:app), in: :groups, limit:1 do
+      	execute "cd /home/deploy/dev/nodeapp/current/ && npm stopall"
+        #execute :npm, :stop, fetch(:app_command)
       end
     end
 end

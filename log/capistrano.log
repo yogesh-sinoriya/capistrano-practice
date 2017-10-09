@@ -4648,3 +4648,1166 @@ Error: Cannot find module 'cliff'
   INFO ---------------------------------------------------------------------------
   INFO START 2017-10-09 19:50:36 +0530 cap nodeapp npm:restart
   INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 19:51:12 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [0c968835] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.5
+ DEBUG [0c968835] Command: /usr/bin/env mkdir -p /tmp
+  INFO [0c968835] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 100.0%
+  INFO [3f634f09] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh as deploy@172.17.0.5
+ DEBUG [3f634f09] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh
+  INFO [3f634f09] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [8c1066a8] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.5
+ DEBUG [8c1066a8] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [8c1066a8] 	fdddd2348be0d28c223c7c81b20d582b6e66f540	HEAD
+  INFO [8c1066a8] Finished in 4.697 seconds with exit status 0 (successful).
+  INFO [b6856d77] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [b6856d77] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases
+  INFO [b6856d77] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [af8c7836] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared/node_modules as deploy@172.17.0.5
+ DEBUG [af8c7836] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared/node_modules
+  INFO [af8c7836] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [f52d241a] Running [ -f /home/deploy/dev/nodeapp/current/REVISION ] as deploy@172.17.0.5
+ DEBUG [f52d241a] Command: [ -f /home/deploy/dev/nodeapp/current/REVISION ]
+ DEBUG [f52d241a] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [d8651130] Running /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null as deploy@172.17.0.5
+ DEBUG [d8651130] Command: /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null
+ DEBUG [d8651130] 	84ef0f225c2906ebf7de7390a1777599837d59fa
+ DEBUG [d8651130] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [4ebbcd48] Running [ -f /home/deploy/dev/nodeapp/repo/HEAD ] as deploy@172.17.0.5
+ DEBUG [4ebbcd48] Command: [ -f /home/deploy/dev/nodeapp/repo/HEAD ]
+ DEBUG [4ebbcd48] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/dev/nodeapp/repo
+ DEBUG [19a79cc5] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [19a79cc5] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [19a79cc5] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [108c51ca] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.5
+ DEBUG [108c51ca] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [108c51ca] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [de2c304a] Running /usr/bin/env git remote update --prune as deploy@172.17.0.5
+ DEBUG [de2c304a] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [de2c304a] 	Fetching origin
+ DEBUG [de2c304a] 	From github.com:yogesh-sinoriya/capistrano-practice
+   84ef0f2..2417ec6  node-app   -> node-app
+  INFO [de2c304a] Finished in 19.202 seconds with exit status 0 (successful).
+ DEBUG [7762c4d1] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [7762c4d1] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [7762c4d1] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [891b0f76] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142117 as deploy@172.17.0.5
+ DEBUG [891b0f76] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142117 )
+  INFO [891b0f76] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [8442ea74] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009142117 as deploy@172.17.0.5
+ DEBUG [8442ea74] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009142117 )
+  INFO [8442ea74] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [57e482ee] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [57e482ee] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [57e482ee] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [b1068fed] Running /usr/bin/env git rev-list --max-count=1 node-app as deploy@172.17.0.5
+ DEBUG [b1068fed] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git rev-list --max-count=1 node-app )
+ DEBUG [b1068fed] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [b1068fed] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [1703f3ac] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009142117; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142117'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [1703f3ac] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009142117; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142117'" 1>&2; false; fi
+ DEBUG [1703f3ac] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [582bc966] Running /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION as deploy@172.17.0.5
+ DEBUG [582bc966] Command: cd /home/deploy/dev/nodeapp/releases/20171009142117 && /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION
+  INFO [582bc966] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [d5637c64] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142117 as deploy@172.17.0.5
+ DEBUG [d5637c64] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142117
+  INFO [d5637c64] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [e7914403] Running [ -L /home/deploy/dev/nodeapp/releases/20171009142117/node_modules ] as deploy@172.17.0.5
+ DEBUG [e7914403] Command: [ -L /home/deploy/dev/nodeapp/releases/20171009142117/node_modules ]
+ DEBUG [e7914403] Finished in 0.003 seconds with exit status 1 (failed).
+ DEBUG [ec115b72] Running [ -d /home/deploy/dev/nodeapp/releases/20171009142117/node_modules ] as deploy@172.17.0.5
+ DEBUG [ec115b72] Command: [ -d /home/deploy/dev/nodeapp/releases/20171009142117/node_modules ]
+ DEBUG [ec115b72] Finished in 0.003 seconds with exit status 1 (failed).
+  INFO [dce98241] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/shared/node_modules /home/deploy/dev/nodeapp/releases/20171009142117/node_modules as deploy@172.17.0.5
+ DEBUG [dce98241] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/shared/node_modules /home/deploy/dev/nodeapp/releases/20171009142117/node_modules
+  INFO [dce98241] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [2ad33069] Running if test ! -d /home/deploy/dev/nodeapp/current/; then echo "Directory does not exist '/home/deploy/dev/nodeapp/current/'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [2ad33069] Command: if test ! -d /home/deploy/dev/nodeapp/current/; then echo "Directory does not exist '/home/deploy/dev/nodeapp/current/'" 1>&2; false; fi
+ DEBUG [2ad33069] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [91b59bea] Running /usr/bin/env npm install --production --silent --no-progress as deploy@172.17.0.5
+ DEBUG [91b59bea] Command: cd /home/deploy/dev/nodeapp/current/ && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [91b59bea] 	added 117 packages and moved 164 packages in 14.75s
+  INFO [91b59bea] Finished in 15.101 seconds with exit status 0 (successful).
+  INFO [a281d7b8] Running /usr/bin/env hostname as deploy@172.17.0.5
+ DEBUG [a281d7b8] Command: /usr/bin/env hostname
+ DEBUG [a281d7b8] 	a689f3ee81ab
+  INFO [a281d7b8] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [7049cd00] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009142117 /home/deploy/dev/nodeapp/releases/current as deploy@172.17.0.5
+ DEBUG [7049cd00] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009142117 /home/deploy/dev/nodeapp/releases/current
+  INFO [7049cd00] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [a15c65a4] Running /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp as deploy@172.17.0.5
+ DEBUG [a15c65a4] Command: /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp
+  INFO [a15c65a4] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 19:53:01 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [000b2898] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.5
+ DEBUG [000b2898] Command: /usr/bin/env mkdir -p /tmp
+  INFO [000b2898] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 100.0%
+  INFO [b79a225f] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh as deploy@172.17.0.5
+ DEBUG [b79a225f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh
+  INFO [b79a225f] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [f95ff12a] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.5
+ DEBUG [f95ff12a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [f95ff12a] 	fdddd2348be0d28c223c7c81b20d582b6e66f540	HEAD
+  INFO [f95ff12a] Finished in 3.621 seconds with exit status 0 (successful).
+  INFO [84405fe6] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [84405fe6] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases
+  INFO [84405fe6] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [300de388] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared/node_modules as deploy@172.17.0.5
+ DEBUG [300de388] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared/node_modules
+  INFO [300de388] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [b6d19a35] Running [ -f /home/deploy/dev/nodeapp/current/REVISION ] as deploy@172.17.0.5
+ DEBUG [b6d19a35] Command: [ -f /home/deploy/dev/nodeapp/current/REVISION ]
+ DEBUG [b6d19a35] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [28801242] Running /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null as deploy@172.17.0.5
+ DEBUG [28801242] Command: /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null
+ DEBUG [28801242] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [28801242] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [1d5886ca] Running [ -f /home/deploy/dev/nodeapp/repo/HEAD ] as deploy@172.17.0.5
+ DEBUG [1d5886ca] Command: [ -f /home/deploy/dev/nodeapp/repo/HEAD ]
+ DEBUG [1d5886ca] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/dev/nodeapp/repo
+ DEBUG [5b8e361f] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [5b8e361f] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [5b8e361f] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [bd9460b7] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.5
+ DEBUG [bd9460b7] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [bd9460b7] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [5932805b] Running /usr/bin/env git remote update --prune as deploy@172.17.0.5
+ DEBUG [5932805b] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [5932805b] 	Fetching origin
+  INFO [5932805b] Finished in 3.845 seconds with exit status 0 (successful).
+ DEBUG [0dc85b26] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [0dc85b26] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [0dc85b26] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [7f5a95f1] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142305 as deploy@172.17.0.5
+ DEBUG [7f5a95f1] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142305 )
+  INFO [7f5a95f1] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [7ce63d34] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009142305 as deploy@172.17.0.5
+ DEBUG [7ce63d34] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009142305 )
+  INFO [7ce63d34] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [bb45a738] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [bb45a738] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [bb45a738] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [a0063aec] Running /usr/bin/env git rev-list --max-count=1 node-app as deploy@172.17.0.5
+ DEBUG [a0063aec] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git rev-list --max-count=1 node-app )
+ DEBUG [a0063aec] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [a0063aec] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [3fac5110] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009142305; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142305'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [3fac5110] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009142305; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142305'" 1>&2; false; fi
+ DEBUG [3fac5110] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [54dbd4d4] Running /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION as deploy@172.17.0.5
+ DEBUG [54dbd4d4] Command: cd /home/deploy/dev/nodeapp/releases/20171009142305 && /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION
+  INFO [54dbd4d4] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [717c026c] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142305 as deploy@172.17.0.5
+ DEBUG [717c026c] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142305
+  INFO [717c026c] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [99c249af] Running [ -L /home/deploy/dev/nodeapp/releases/20171009142305/node_modules ] as deploy@172.17.0.5
+ DEBUG [99c249af] Command: [ -L /home/deploy/dev/nodeapp/releases/20171009142305/node_modules ]
+ DEBUG [99c249af] Finished in 0.003 seconds with exit status 1 (failed).
+ DEBUG [130cf5ec] Running [ -d /home/deploy/dev/nodeapp/releases/20171009142305/node_modules ] as deploy@172.17.0.5
+ DEBUG [130cf5ec] Command: [ -d /home/deploy/dev/nodeapp/releases/20171009142305/node_modules ]
+ DEBUG [130cf5ec] Finished in 0.003 seconds with exit status 1 (failed).
+  INFO [fa425ce4] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/shared/node_modules /home/deploy/dev/nodeapp/releases/20171009142305/node_modules as deploy@172.17.0.5
+ DEBUG [fa425ce4] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/shared/node_modules /home/deploy/dev/nodeapp/releases/20171009142305/node_modules
+  INFO [fa425ce4] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [98f901e8] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009142305; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142305'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [98f901e8] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009142305; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142305'" 1>&2; false; fi
+ DEBUG [98f901e8] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [01473ab8] Running /usr/bin/env npm install --production --silent --no-progress as deploy@172.17.0.5
+ DEBUG [01473ab8] Command: cd /home/deploy/dev/nodeapp/releases/20171009142305 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [01473ab8] 	added 115 packages in 11.832s
+  INFO [01473ab8] Finished in 12.181 seconds with exit status 0 (successful).
+  INFO [d6bf6385] Running /usr/bin/env hostname as deploy@172.17.0.5
+ DEBUG [d6bf6385] Command: /usr/bin/env hostname
+ DEBUG [d6bf6385] 	a689f3ee81ab
+  INFO [d6bf6385] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [537df06d] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009142305 /home/deploy/dev/nodeapp/releases/current as deploy@172.17.0.5
+ DEBUG [537df06d] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009142305 /home/deploy/dev/nodeapp/releases/current
+  INFO [537df06d] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [06576703] Running /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp as deploy@172.17.0.5
+ DEBUG [06576703] Command: /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp
+  INFO [06576703] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [4d537c30] Running cd /home/deploy/dev/nodeapp/current/ && ./node_modules/.bin/forever start app.js as deploy@172.17.0.5
+ DEBUG [4d537c30] Command: cd /home/deploy/dev/nodeapp/current/ && ./node_modules/.bin/forever start app.js
+ DEBUG [4d537c30] 	module.js:529
+    throw err;
+    ^
+
+Error: Cannot find module 'cliff'
+    at Function.Module._resolveFilename (module.js:527:15)
+    at Function.Module._load (module.js:476:23)
+    at Module.require (module.js:568:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/home/deploy/dev/nodeapp/shared/node_modules/forever/lib/forever.js:14:13)
+    at Module._compile (module.js:624:30)
+    at Object.Module._extensions..js (module.js:635:10)
+    at Module.load (module.js:545:32)
+    at tryModuleLoad (module.js:508:12)
+    at Function.Module._load (module.js:500:3)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 19:54:14 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9740b509] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.5
+ DEBUG [9740b509] Command: /usr/bin/env mkdir -p /tmp
+  INFO [9740b509] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 100.0%
+  INFO [3f87fd41] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh as deploy@172.17.0.5
+ DEBUG [3f87fd41] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh
+  INFO [3f87fd41] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [16317028] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.5
+ DEBUG [16317028] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [16317028] 	fdddd2348be0d28c223c7c81b20d582b6e66f540	HEAD
+  INFO [16317028] Finished in 4.054 seconds with exit status 0 (successful).
+  INFO [5ac93d5b] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [5ac93d5b] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases
+  INFO [5ac93d5b] Finished in 0.012 seconds with exit status 0 (successful).
+  INFO [5897df3e] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared/node_modules as deploy@172.17.0.5
+ DEBUG [5897df3e] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared/node_modules
+  INFO [5897df3e] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [fda934bb] Running [ -f /home/deploy/dev/nodeapp/current/REVISION ] as deploy@172.17.0.5
+ DEBUG [fda934bb] Command: [ -f /home/deploy/dev/nodeapp/current/REVISION ]
+ DEBUG [fda934bb] Finished in 0.007 seconds with exit status 1 (failed).
+ DEBUG [1014a397] Running [ -f /home/deploy/dev/nodeapp/repo/HEAD ] as deploy@172.17.0.5
+ DEBUG [1014a397] Command: [ -f /home/deploy/dev/nodeapp/repo/HEAD ]
+ DEBUG [1014a397] Finished in 0.006 seconds with exit status 1 (failed).
+ DEBUG [f3157494] Running if test ! -d /home/deploy/dev/nodeapp; then echo "Directory does not exist '/home/deploy/dev/nodeapp'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [f3157494] Command: if test ! -d /home/deploy/dev/nodeapp; then echo "Directory does not exist '/home/deploy/dev/nodeapp'" 1>&2; false; fi
+ DEBUG [f3157494] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [ef61ee68] Running /usr/bin/env git clone --mirror git@github.com:yogesh-sinoriya/capistrano-practice.git /home/deploy/dev/nodeapp/repo as deploy@172.17.0.5
+ DEBUG [ef61ee68] Command: cd /home/deploy/dev/nodeapp && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git clone --mirror git@github.com:yogesh-sinoriya/capistrano-practice.git /home/deploy/dev/nodeapp/repo )
+ DEBUG [ef61ee68] 	Cloning into bare repository '/home/deploy/dev/nodeapp/repo'...
+  INFO [ef61ee68] Finished in 5.357 seconds with exit status 0 (successful).
+ DEBUG [2ba8852a] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [2ba8852a] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [2ba8852a] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [fdf56bbf] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.5
+ DEBUG [fdf56bbf] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [fdf56bbf] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [498e1527] Running /usr/bin/env git remote update --prune as deploy@172.17.0.5
+ DEBUG [498e1527] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [498e1527] 	Fetching origin
+  INFO [498e1527] Finished in 3.750 seconds with exit status 0 (successful).
+ DEBUG [0e5b8a77] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [0e5b8a77] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [0e5b8a77] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [fb863d0a] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142418 as deploy@172.17.0.5
+ DEBUG [fb863d0a] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142418 )
+  INFO [fb863d0a] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [a283b039] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009142418 as deploy@172.17.0.5
+ DEBUG [a283b039] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009142418 )
+  INFO [a283b039] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [8f7f7228] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [8f7f7228] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [8f7f7228] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [e2d258ac] Running /usr/bin/env git rev-list --max-count=1 node-app as deploy@172.17.0.5
+ DEBUG [e2d258ac] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git rev-list --max-count=1 node-app )
+ DEBUG [e2d258ac] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [e2d258ac] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [5cee6808] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009142418; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142418'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [5cee6808] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009142418; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142418'" 1>&2; false; fi
+ DEBUG [5cee6808] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [47b31ee0] Running /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION as deploy@172.17.0.5
+ DEBUG [47b31ee0] Command: cd /home/deploy/dev/nodeapp/releases/20171009142418 && /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION
+  INFO [47b31ee0] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [e8ffc19e] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142418 as deploy@172.17.0.5
+ DEBUG [e8ffc19e] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142418
+  INFO [e8ffc19e] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [06015f1a] Running [ -L /home/deploy/dev/nodeapp/releases/20171009142418/node_modules ] as deploy@172.17.0.5
+ DEBUG [06015f1a] Command: [ -L /home/deploy/dev/nodeapp/releases/20171009142418/node_modules ]
+ DEBUG [06015f1a] Finished in 0.003 seconds with exit status 1 (failed).
+ DEBUG [d8374ff8] Running [ -d /home/deploy/dev/nodeapp/releases/20171009142418/node_modules ] as deploy@172.17.0.5
+ DEBUG [d8374ff8] Command: [ -d /home/deploy/dev/nodeapp/releases/20171009142418/node_modules ]
+ DEBUG [d8374ff8] Finished in 0.003 seconds with exit status 1 (failed).
+  INFO [81036f66] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/shared/node_modules /home/deploy/dev/nodeapp/releases/20171009142418/node_modules as deploy@172.17.0.5
+ DEBUG [81036f66] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/shared/node_modules /home/deploy/dev/nodeapp/releases/20171009142418/node_modules
+  INFO [81036f66] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [805bfeba] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009142418; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142418'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [805bfeba] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009142418; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142418'" 1>&2; false; fi
+ DEBUG [805bfeba] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [66ce69ab] Running /usr/bin/env npm install --production --silent --no-progress as deploy@172.17.0.5
+ DEBUG [66ce69ab] Command: cd /home/deploy/dev/nodeapp/releases/20171009142418 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [66ce69ab] 	added 166 packages in 1.699s
+  INFO [66ce69ab] Finished in 2.032 seconds with exit status 0 (successful).
+  INFO [b351798d] Running /usr/bin/env hostname as deploy@172.17.0.5
+ DEBUG [b351798d] Command: /usr/bin/env hostname
+ DEBUG [b351798d] 	a689f3ee81ab
+  INFO [b351798d] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [d8e41fa8] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009142418 /home/deploy/dev/nodeapp/releases/current as deploy@172.17.0.5
+ DEBUG [d8e41fa8] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009142418 /home/deploy/dev/nodeapp/releases/current
+  INFO [d8e41fa8] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [29b4fe5b] Running /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp as deploy@172.17.0.5
+ DEBUG [29b4fe5b] Command: /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp
+  INFO [29b4fe5b] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [bd3fc5b1] Running cd /home/deploy/dev/nodeapp/current/ && ./node_modules/.bin/forever start app.js as deploy@172.17.0.5
+ DEBUG [bd3fc5b1] Command: cd /home/deploy/dev/nodeapp/current/ && ./node_modules/.bin/forever start app.js
+ DEBUG [bd3fc5b1] 	[33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
+ DEBUG [bd3fc5b1] 	[33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+ DEBUG [bd3fc5b1] 	[32minfo[39m:    Forever processing file: [90mapp.js[39m
+  INFO [bd3fc5b1] Finished in 0.190 seconds with exit status 0 (successful).
+ DEBUG [10b37cb7] Running /usr/bin/env ls -x /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [10b37cb7] Command: /usr/bin/env ls -x /home/deploy/dev/nodeapp/releases
+ DEBUG [10b37cb7] 	20171009142418
+ DEBUG [10b37cb7] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [a70af8f4] Running if test ! -d /home/deploy/dev/nodeapp/releases; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [a70af8f4] Command: if test ! -d /home/deploy/dev/nodeapp/releases; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases'" 1>&2; false; fi
+ DEBUG [a70af8f4] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [55b8e89d] Running /usr/bin/env echo "Branch node-app (at 2417ec6aeb93b0f5703e1fea663db965a37a03b3) deployed as release 20171009142418 by yogesh" >> /home/deploy/dev/nodeapp/revisions.log as deploy@172.17.0.5
+ DEBUG [55b8e89d] Command: cd /home/deploy/dev/nodeapp/releases && /usr/bin/env echo "Branch node-app (at 2417ec6aeb93b0f5703e1fea663db965a37a03b3) deployed as release 20171009142418 by yogesh" >> /home/deploy/dev/nodeapp/revisions.log
+  INFO [55b8e89d] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 19:55:00 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e3488893] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.5
+ DEBUG [e3488893] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e3488893] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 100.0%
+  INFO [b653cf5f] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh as deploy@172.17.0.5
+ DEBUG [b653cf5f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh
+  INFO [b653cf5f] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [d3d19759] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.5
+ DEBUG [d3d19759] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [d3d19759] 	fdddd2348be0d28c223c7c81b20d582b6e66f540	HEAD
+  INFO [d3d19759] Finished in 3.741 seconds with exit status 0 (successful).
+  INFO [9642fad8] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [9642fad8] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases
+  INFO [9642fad8] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [7bd42828] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared/node_modules as deploy@172.17.0.5
+ DEBUG [7bd42828] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared/node_modules
+  INFO [7bd42828] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [7fcae1cd] Running [ -f /home/deploy/dev/nodeapp/current/REVISION ] as deploy@172.17.0.5
+ DEBUG [7fcae1cd] Command: [ -f /home/deploy/dev/nodeapp/current/REVISION ]
+ DEBUG [7fcae1cd] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [fc980de2] Running /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null as deploy@172.17.0.5
+ DEBUG [fc980de2] Command: /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null
+ DEBUG [fc980de2] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [fc980de2] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [bc27cff2] Running [ -f /home/deploy/dev/nodeapp/repo/HEAD ] as deploy@172.17.0.5
+ DEBUG [bc27cff2] Command: [ -f /home/deploy/dev/nodeapp/repo/HEAD ]
+ DEBUG [bc27cff2] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/dev/nodeapp/repo
+ DEBUG [e3d65ee7] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [e3d65ee7] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [e3d65ee7] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [133ad69f] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.5
+ DEBUG [133ad69f] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [133ad69f] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [c6cf54bf] Running /usr/bin/env git remote update --prune as deploy@172.17.0.5
+ DEBUG [c6cf54bf] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c6cf54bf] 	Fetching origin
+  INFO [c6cf54bf] Finished in 9.128 seconds with exit status 0 (successful).
+ DEBUG [ac902444] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [ac902444] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [ac902444] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [0e832d85] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142504 as deploy@172.17.0.5
+ DEBUG [0e832d85] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142504 )
+  INFO [0e832d85] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [8db909a0] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009142504 as deploy@172.17.0.5
+ DEBUG [8db909a0] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009142504 )
+  INFO [8db909a0] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [3479443b] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [3479443b] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [3479443b] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [854eda02] Running /usr/bin/env git rev-list --max-count=1 node-app as deploy@172.17.0.5
+ DEBUG [854eda02] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git rev-list --max-count=1 node-app )
+ DEBUG [854eda02] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [854eda02] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [b156110f] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009142504; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142504'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [b156110f] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009142504; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142504'" 1>&2; false; fi
+ DEBUG [b156110f] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [3c17d924] Running /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION as deploy@172.17.0.5
+ DEBUG [3c17d924] Command: cd /home/deploy/dev/nodeapp/releases/20171009142504 && /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION
+  INFO [3c17d924] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [a9c70ec1] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142504 as deploy@172.17.0.5
+ DEBUG [a9c70ec1] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142504
+  INFO [a9c70ec1] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [3e299138] Running [ -L /home/deploy/dev/nodeapp/releases/20171009142504/node_modules ] as deploy@172.17.0.5
+ DEBUG [3e299138] Command: [ -L /home/deploy/dev/nodeapp/releases/20171009142504/node_modules ]
+ DEBUG [3e299138] Finished in 0.003 seconds with exit status 1 (failed).
+ DEBUG [4b6804b0] Running [ -d /home/deploy/dev/nodeapp/releases/20171009142504/node_modules ] as deploy@172.17.0.5
+ DEBUG [4b6804b0] Command: [ -d /home/deploy/dev/nodeapp/releases/20171009142504/node_modules ]
+ DEBUG [4b6804b0] Finished in 0.003 seconds with exit status 1 (failed).
+  INFO [0814e55a] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/shared/node_modules /home/deploy/dev/nodeapp/releases/20171009142504/node_modules as deploy@172.17.0.5
+ DEBUG [0814e55a] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/shared/node_modules /home/deploy/dev/nodeapp/releases/20171009142504/node_modules
+  INFO [0814e55a] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [87e65e97] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009142504; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142504'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [87e65e97] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009142504; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142504'" 1>&2; false; fi
+ DEBUG [87e65e97] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [1d50605e] Running /usr/bin/env npm install --production --silent --no-progress as deploy@172.17.0.5
+ DEBUG [1d50605e] Command: cd /home/deploy/dev/nodeapp/releases/20171009142504 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [1d50605e] 	added 117 packages and moved 164 packages in 15.265s
+  INFO [1d50605e] Finished in 15.600 seconds with exit status 0 (successful).
+  INFO [f6a4b658] Running /usr/bin/env hostname as deploy@172.17.0.5
+ DEBUG [f6a4b658] Command: /usr/bin/env hostname
+ DEBUG [f6a4b658] 	a689f3ee81ab
+  INFO [f6a4b658] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [c15b914b] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009142504 /home/deploy/dev/nodeapp/releases/current as deploy@172.17.0.5
+ DEBUG [c15b914b] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009142504 /home/deploy/dev/nodeapp/releases/current
+  INFO [c15b914b] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [a8e64138] Running /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp as deploy@172.17.0.5
+ DEBUG [a8e64138] Command: /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp
+  INFO [a8e64138] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [6536a278] Running cd /home/deploy/dev/nodeapp/current/ && ./node_modules/.bin/forever restart app.js as deploy@172.17.0.5
+ DEBUG [6536a278] Command: cd /home/deploy/dev/nodeapp/current/ && ./node_modules/.bin/forever restart app.js
+ DEBUG [6536a278] 	module.js:529
+    throw err;
+    ^
+
+Error: Cannot find module 'cliff'
+    at Function.Module._resolveFilename (module.js:527:15)
+    at Function.Module._load (module.js:476:23)
+    at Module.require (module.js:568:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/home/deploy/dev/nodeapp/shared/node_modules/forever/lib/forever.js:14:13)
+    at Module._compile (module.js:624:30)
+    at Object.Module._extensions..js (module.js:635:10)
+    at Module.load (module.js:545:32)
+    at tryModuleLoad (module.js:508:12)
+    at Function.Module._load (module.js:500:3)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 19:56:21 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [750d6b79] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.5
+ DEBUG [750d6b79] Command: /usr/bin/env mkdir -p /tmp
+  INFO [750d6b79] Finished in 0.178 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 100.0%
+  INFO [958e4e1f] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh as deploy@172.17.0.5
+ DEBUG [958e4e1f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh
+  INFO [958e4e1f] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [9da84d4c] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.5
+ DEBUG [9da84d4c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [9da84d4c] 	fdddd2348be0d28c223c7c81b20d582b6e66f540	HEAD
+  INFO [9da84d4c] Finished in 3.673 seconds with exit status 0 (successful).
+  INFO [15aed4cc] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [15aed4cc] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases
+  INFO [15aed4cc] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [ff0c0a66] Running [ -f /home/deploy/dev/nodeapp/current/REVISION ] as deploy@172.17.0.5
+ DEBUG [ff0c0a66] Command: [ -f /home/deploy/dev/nodeapp/current/REVISION ]
+ DEBUG [ff0c0a66] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [207fe7d3] Running /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null as deploy@172.17.0.5
+ DEBUG [207fe7d3] Command: /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null
+ DEBUG [207fe7d3] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [207fe7d3] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [0402ce65] Running [ -f /home/deploy/dev/nodeapp/repo/HEAD ] as deploy@172.17.0.5
+ DEBUG [0402ce65] Command: [ -f /home/deploy/dev/nodeapp/repo/HEAD ]
+ DEBUG [0402ce65] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/dev/nodeapp/repo
+ DEBUG [525fde00] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [525fde00] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [525fde00] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [086a2d7d] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.5
+ DEBUG [086a2d7d] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [086a2d7d] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [08b35e39] Running /usr/bin/env git remote update --prune as deploy@172.17.0.5
+ DEBUG [08b35e39] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [08b35e39] 	Fetching origin
+  INFO [08b35e39] Finished in 3.686 seconds with exit status 0 (successful).
+ DEBUG [fc121e67] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [fc121e67] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [fc121e67] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [e72ff4ba] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142625 as deploy@172.17.0.5
+ DEBUG [e72ff4ba] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142625 )
+  INFO [e72ff4ba] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [93172654] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009142625 as deploy@172.17.0.5
+ DEBUG [93172654] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009142625 )
+  INFO [93172654] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [d0b542ef] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [d0b542ef] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [d0b542ef] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [93b4d356] Running /usr/bin/env git rev-list --max-count=1 node-app as deploy@172.17.0.5
+ DEBUG [93b4d356] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git rev-list --max-count=1 node-app )
+ DEBUG [93b4d356] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [93b4d356] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [5e8fcfdb] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009142625; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142625'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [5e8fcfdb] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009142625; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142625'" 1>&2; false; fi
+ DEBUG [5e8fcfdb] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [8e78a2fa] Running /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION as deploy@172.17.0.5
+ DEBUG [8e78a2fa] Command: cd /home/deploy/dev/nodeapp/releases/20171009142625 && /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION
+  INFO [8e78a2fa] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [e52720b5] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009142625; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142625'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [e52720b5] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009142625; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142625'" 1>&2; false; fi
+ DEBUG [e52720b5] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [dcb7e1de] Running /usr/bin/env npm install --production --silent --no-progress as deploy@172.17.0.5
+ DEBUG [dcb7e1de] Command: cd /home/deploy/dev/nodeapp/releases/20171009142625 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [dcb7e1de] 	added 166 packages in 1.657s
+  INFO [dcb7e1de] Finished in 1.998 seconds with exit status 0 (successful).
+  INFO [0b41180e] Running /usr/bin/env hostname as deploy@172.17.0.5
+ DEBUG [0b41180e] Command: /usr/bin/env hostname
+ DEBUG [0b41180e] 	a689f3ee81ab
+  INFO [0b41180e] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [87847d2c] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009142625 /home/deploy/dev/nodeapp/releases/current as deploy@172.17.0.5
+ DEBUG [87847d2c] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009142625 /home/deploy/dev/nodeapp/releases/current
+  INFO [87847d2c] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [167c924a] Running /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp as deploy@172.17.0.5
+ DEBUG [167c924a] Command: /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp
+  INFO [167c924a] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [39cf36ee] Running cd /home/deploy/dev/nodeapp/current/ && ./node_modules/.bin/forever restart app.js as deploy@172.17.0.5
+ DEBUG [39cf36ee] Command: cd /home/deploy/dev/nodeapp/current/ && ./node_modules/.bin/forever restart app.js
+ DEBUG [39cf36ee] 	[31merror[39m:   Error restarting process: [90mapp.js[39m
+ DEBUG [39cf36ee] 	[31merror[39m:   Cannot find forever process: app.js
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 19:57:41 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a49be8a5] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.5
+ DEBUG [a49be8a5] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a49be8a5] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 100.0%
+  INFO [a988cfea] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh as deploy@172.17.0.5
+ DEBUG [a988cfea] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh
+  INFO [a988cfea] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [0a3b3e8b] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.5
+ DEBUG [0a3b3e8b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [0a3b3e8b] 	fdddd2348be0d28c223c7c81b20d582b6e66f540	HEAD
+  INFO [0a3b3e8b] Finished in 6.790 seconds with exit status 0 (successful).
+  INFO [a19f49a2] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [a19f49a2] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases
+  INFO [a19f49a2] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [1c37948c] Running [ -f /home/deploy/dev/nodeapp/current/REVISION ] as deploy@172.17.0.5
+ DEBUG [1c37948c] Command: [ -f /home/deploy/dev/nodeapp/current/REVISION ]
+ DEBUG [1c37948c] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [1d5d7514] Running /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null as deploy@172.17.0.5
+ DEBUG [1d5d7514] Command: /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null
+ DEBUG [1d5d7514] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [1d5d7514] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [d1839697] Running [ -f /home/deploy/dev/nodeapp/repo/HEAD ] as deploy@172.17.0.5
+ DEBUG [d1839697] Command: [ -f /home/deploy/dev/nodeapp/repo/HEAD ]
+ DEBUG [d1839697] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/dev/nodeapp/repo
+ DEBUG [201d5256] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [201d5256] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [201d5256] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [8831b34b] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.5
+ DEBUG [8831b34b] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [8831b34b] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [bc2a46bb] Running /usr/bin/env git remote update --prune as deploy@172.17.0.5
+ DEBUG [bc2a46bb] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [bc2a46bb] 	Fetching origin
+  INFO [bc2a46bb] Finished in 3.656 seconds with exit status 0 (successful).
+ DEBUG [f265dc27] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [f265dc27] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [f265dc27] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [d1b165d0] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142748 as deploy@172.17.0.5
+ DEBUG [d1b165d0] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009142748 )
+  INFO [d1b165d0] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [bfdc4925] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009142748 as deploy@172.17.0.5
+ DEBUG [bfdc4925] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009142748 )
+  INFO [bfdc4925] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [fa2b13f9] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [fa2b13f9] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [fa2b13f9] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [6ef1f6ec] Running /usr/bin/env git rev-list --max-count=1 node-app as deploy@172.17.0.5
+ DEBUG [6ef1f6ec] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git rev-list --max-count=1 node-app )
+ DEBUG [6ef1f6ec] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [6ef1f6ec] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [4e298877] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009142748; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142748'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [4e298877] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009142748; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142748'" 1>&2; false; fi
+ DEBUG [4e298877] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [cb860962] Running /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION as deploy@172.17.0.5
+ DEBUG [cb860962] Command: cd /home/deploy/dev/nodeapp/releases/20171009142748 && /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION
+  INFO [cb860962] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [676a3df2] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009142748; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142748'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [676a3df2] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009142748; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009142748'" 1>&2; false; fi
+ DEBUG [676a3df2] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [0968ceb3] Running /usr/bin/env npm install --production --silent --no-progress as deploy@172.17.0.5
+ DEBUG [0968ceb3] Command: cd /home/deploy/dev/nodeapp/releases/20171009142748 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [0968ceb3] 	added 166 packages in 1.667s
+  INFO [0968ceb3] Finished in 2.004 seconds with exit status 0 (successful).
+  INFO [64b3027f] Running /usr/bin/env hostname as deploy@172.17.0.5
+ DEBUG [64b3027f] Command: /usr/bin/env hostname
+ DEBUG [64b3027f] 	a689f3ee81ab
+  INFO [64b3027f] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [2b8cfea4] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009142748 /home/deploy/dev/nodeapp/releases/current as deploy@172.17.0.5
+ DEBUG [2b8cfea4] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009142748 /home/deploy/dev/nodeapp/releases/current
+  INFO [2b8cfea4] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [b6b60be6] Running /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp as deploy@172.17.0.5
+ DEBUG [b6b60be6] Command: /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp
+  INFO [b6b60be6] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [ae3ba0cc] Running cd /home/deploy/dev/nodeapp/current/ && npm restart as deploy@172.17.0.5
+ DEBUG [ae3ba0cc] Command: cd /home/deploy/dev/nodeapp/current/ && npm restart
+ DEBUG [ae3ba0cc] 	
+> capistrano-practice@1.0.0 restart /home/deploy/dev/nodeapp/releases/20171009142748
+> forever restart app.js
+
+ DEBUG [ae3ba0cc] 	[31merror[39m:   Error restarting process: [90mapp.js[39m
+ DEBUG [ae3ba0cc] 	[31merror[39m:   Cannot find forever process: app.js
+ DEBUG [ae3ba0cc] 	npm
+ DEBUG [ae3ba0cc] 	 
+ DEBUG [ae3ba0cc] 	ERR! code ELIFECYCLE
+ DEBUG [ae3ba0cc] 	npm
+ DEBUG [ae3ba0cc] 	 
+ DEBUG [ae3ba0cc] 	ERR!
+ DEBUG [ae3ba0cc] 	 
+ DEBUG [ae3ba0cc] 	errno
+ DEBUG [ae3ba0cc] 	 1
+ DEBUG [ae3ba0cc] 	npm ERR!
+ DEBUG [ae3ba0cc] 	 capistrano-practice@1.0.0 restart: `forever restart app.js`
+ DEBUG [ae3ba0cc] 	npm
+ DEBUG [ae3ba0cc] 	 
+ DEBUG [ae3ba0cc] 	ERR!
+ DEBUG [ae3ba0cc] 	 Exit status 1
+ DEBUG [ae3ba0cc] 	npm
+ DEBUG [ae3ba0cc] 	 
+ DEBUG [ae3ba0cc] 	ERR!
+ DEBUG [ae3ba0cc] 	 
+npm 
+ DEBUG [ae3ba0cc] 	ERR!
+ DEBUG [ae3ba0cc] 	 Failed at the capistrano-practice@1.0.0 restart script.
+ DEBUG [ae3ba0cc] 	npm
+ DEBUG [ae3ba0cc] 	 
+ DEBUG [ae3ba0cc] 	ERR!
+ DEBUG [ae3ba0cc] 	 This is probably not a problem with npm. There is likely additional logging output above.
+ DEBUG [ae3ba0cc] 	
+ DEBUG [ae3ba0cc] 	npm 
+ DEBUG [ae3ba0cc] 	ERR!
+ DEBUG [ae3ba0cc] 	 A complete log of this run can be found in:
+ DEBUG [ae3ba0cc] 	npm
+ DEBUG [ae3ba0cc] 	 
+ DEBUG [ae3ba0cc] 	ERR!
+ DEBUG [ae3ba0cc] 	     /home/deploy/.npm/_logs/2017-10-09T14_27_56_775Z-debug.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 20:03:23 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2fac5dae] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.5
+ DEBUG [2fac5dae] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2fac5dae] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 100.0%
+  INFO [6c47c63f] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh as deploy@172.17.0.5
+ DEBUG [6c47c63f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh
+  INFO [6c47c63f] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [3daa5464] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.5
+ DEBUG [3daa5464] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [3daa5464] 	fdddd2348be0d28c223c7c81b20d582b6e66f540	HEAD
+  INFO [3daa5464] Finished in 3.666 seconds with exit status 0 (successful).
+  INFO [0f960c54] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [0f960c54] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases
+  INFO [0f960c54] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [bbea7d6f] Running [ -f /home/deploy/dev/nodeapp/current/REVISION ] as deploy@172.17.0.5
+ DEBUG [bbea7d6f] Command: [ -f /home/deploy/dev/nodeapp/current/REVISION ]
+ DEBUG [bbea7d6f] Finished in 0.003 seconds with exit status 1 (failed).
+ DEBUG [87722efe] Running [ -f /home/deploy/dev/nodeapp/repo/HEAD ] as deploy@172.17.0.5
+ DEBUG [87722efe] Command: [ -f /home/deploy/dev/nodeapp/repo/HEAD ]
+ DEBUG [87722efe] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [b8ad5025] Running if test ! -d /home/deploy/dev/nodeapp; then echo "Directory does not exist '/home/deploy/dev/nodeapp'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [b8ad5025] Command: if test ! -d /home/deploy/dev/nodeapp; then echo "Directory does not exist '/home/deploy/dev/nodeapp'" 1>&2; false; fi
+ DEBUG [b8ad5025] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [1d6c49cd] Running /usr/bin/env git clone --mirror git@github.com:yogesh-sinoriya/capistrano-practice.git /home/deploy/dev/nodeapp/repo as deploy@172.17.0.5
+ DEBUG [1d6c49cd] Command: cd /home/deploy/dev/nodeapp && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git clone --mirror git@github.com:yogesh-sinoriya/capistrano-practice.git /home/deploy/dev/nodeapp/repo )
+ DEBUG [1d6c49cd] 	Cloning into bare repository '/home/deploy/dev/nodeapp/repo'...
+  INFO [1d6c49cd] Finished in 6.489 seconds with exit status 0 (successful).
+ DEBUG [59b8ece5] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [59b8ece5] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [59b8ece5] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [4dae3d42] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.5
+ DEBUG [4dae3d42] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [4dae3d42] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [228f2604] Running /usr/bin/env git remote update --prune as deploy@172.17.0.5
+ DEBUG [228f2604] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [228f2604] 	Fetching origin
+  INFO [228f2604] Finished in 3.679 seconds with exit status 0 (successful).
+ DEBUG [787f0a30] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [787f0a30] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [787f0a30] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [f9423110] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009143327 as deploy@172.17.0.5
+ DEBUG [f9423110] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009143327 )
+  INFO [f9423110] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [1e879bea] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009143327 as deploy@172.17.0.5
+ DEBUG [1e879bea] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009143327 )
+  INFO [1e879bea] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [87e028dc] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [87e028dc] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [87e028dc] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [2666f7b6] Running /usr/bin/env git rev-list --max-count=1 node-app as deploy@172.17.0.5
+ DEBUG [2666f7b6] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git rev-list --max-count=1 node-app )
+ DEBUG [2666f7b6] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [2666f7b6] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [5d502ada] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009143327; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143327'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [5d502ada] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009143327; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143327'" 1>&2; false; fi
+ DEBUG [5d502ada] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [12cb4338] Running /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION as deploy@172.17.0.5
+ DEBUG [12cb4338] Command: cd /home/deploy/dev/nodeapp/releases/20171009143327 && /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION
+  INFO [12cb4338] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [48311671] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009143327; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143327'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [48311671] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009143327; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143327'" 1>&2; false; fi
+ DEBUG [48311671] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [ef7d69b6] Running /usr/bin/env npm install --production --silent --no-progress as deploy@172.17.0.5
+ DEBUG [ef7d69b6] Command: cd /home/deploy/dev/nodeapp/releases/20171009143327 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [ef7d69b6] 	added 166 packages in 1.851s
+  INFO [ef7d69b6] Finished in 2.197 seconds with exit status 0 (successful).
+  INFO [048e7060] Running /usr/bin/env hostname as deploy@172.17.0.5
+ DEBUG [048e7060] Command: /usr/bin/env hostname
+ DEBUG [048e7060] 	a689f3ee81ab
+  INFO [048e7060] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [411fda8b] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009143327 /home/deploy/dev/nodeapp/releases/current as deploy@172.17.0.5
+ DEBUG [411fda8b] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009143327 /home/deploy/dev/nodeapp/releases/current
+  INFO [411fda8b] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [59b20c80] Running /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp as deploy@172.17.0.5
+ DEBUG [59b20c80] Command: /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp
+  INFO [59b20c80] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [05467ac0] Running /usr/bin/env npm start  as deploy@172.17.0.5
+ DEBUG [05467ac0] Command: /usr/bin/env npm start 
+ DEBUG [05467ac0] 	npm
+ DEBUG [05467ac0] 	 
+ DEBUG [05467ac0] 	ERR! path
+ DEBUG [05467ac0] 	 /home/deploy/package.json
+ DEBUG [05467ac0] 	npm
+ DEBUG [05467ac0] 	 
+ DEBUG [05467ac0] 	ERR! code
+ DEBUG [05467ac0] 	 ENOENT
+ DEBUG [05467ac0] 	npm
+ DEBUG [05467ac0] 	 ERR! 
+ DEBUG [05467ac0] 	errno -2
+ DEBUG [05467ac0] 	npm
+ DEBUG [05467ac0] 	 ERR! 
+ DEBUG [05467ac0] 	syscall
+ DEBUG [05467ac0] 	 open
+ DEBUG [05467ac0] 	npm ERR! enoent
+ DEBUG [05467ac0] 	 ENOENT: no such file or directory, open '/home/deploy/package.json'
+ DEBUG [05467ac0] 	npm
+ DEBUG [05467ac0] 	 ERR!
+ DEBUG [05467ac0] 	 
+ DEBUG [05467ac0] 	enoent
+ DEBUG [05467ac0] 	 This is related to npm not being able to find a file.
+ DEBUG [05467ac0] 	npm
+ DEBUG [05467ac0] 	 
+ DEBUG [05467ac0] 	ERR!
+ DEBUG [05467ac0] 	 enoent
+ DEBUG [05467ac0] 	 
+ DEBUG [05467ac0] 	
+ DEBUG [05467ac0] 	npm ERR!
+ DEBUG [05467ac0] 	 A complete log of this run can be found in:
+ DEBUG [05467ac0] 	npm ERR!
+ DEBUG [05467ac0] 	     /home/deploy/.npm/_logs/2017-10-09T14_33_41_880Z-debug.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 20:04:12 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [31b8fe7c] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.5
+ DEBUG [31b8fe7c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [31b8fe7c] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 100.0%
+  INFO [8e78ba33] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh as deploy@172.17.0.5
+ DEBUG [8e78ba33] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh
+  INFO [8e78ba33] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [74f3cc62] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.5
+ DEBUG [74f3cc62] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [74f3cc62] 	fdddd2348be0d28c223c7c81b20d582b6e66f540	HEAD
+  INFO [74f3cc62] Finished in 3.947 seconds with exit status 0 (successful).
+  INFO [2dd0372b] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [2dd0372b] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases
+  INFO [2dd0372b] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [55e217c6] Running [ -f /home/deploy/dev/nodeapp/current/REVISION ] as deploy@172.17.0.5
+ DEBUG [55e217c6] Command: [ -f /home/deploy/dev/nodeapp/current/REVISION ]
+ DEBUG [55e217c6] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [daefab87] Running /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null as deploy@172.17.0.5
+ DEBUG [daefab87] Command: /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null
+ DEBUG [daefab87] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [daefab87] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [9f948f83] Running [ -f /home/deploy/dev/nodeapp/repo/HEAD ] as deploy@172.17.0.5
+ DEBUG [9f948f83] Command: [ -f /home/deploy/dev/nodeapp/repo/HEAD ]
+ DEBUG [9f948f83] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/dev/nodeapp/repo
+ DEBUG [df096b4c] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [df096b4c] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [df096b4c] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [6227c425] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.5
+ DEBUG [6227c425] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [6227c425] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [77ad8a0b] Running /usr/bin/env git remote update --prune as deploy@172.17.0.5
+ DEBUG [77ad8a0b] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [77ad8a0b] 	Fetching origin
+  INFO [77ad8a0b] Finished in 3.842 seconds with exit status 0 (successful).
+ DEBUG [4ed2e9b8] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [4ed2e9b8] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [4ed2e9b8] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [65dc63d9] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009143416 as deploy@172.17.0.5
+ DEBUG [65dc63d9] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009143416 )
+  INFO [65dc63d9] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [4004768f] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009143416 as deploy@172.17.0.5
+ DEBUG [4004768f] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009143416 )
+  INFO [4004768f] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [8e559180] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [8e559180] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [8e559180] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [24304bda] Running /usr/bin/env git rev-list --max-count=1 node-app as deploy@172.17.0.5
+ DEBUG [24304bda] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git rev-list --max-count=1 node-app )
+ DEBUG [24304bda] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [24304bda] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [238b2280] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009143416; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143416'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [238b2280] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009143416; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143416'" 1>&2; false; fi
+ DEBUG [238b2280] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [099e95b5] Running /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION as deploy@172.17.0.5
+ DEBUG [099e95b5] Command: cd /home/deploy/dev/nodeapp/releases/20171009143416 && /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION
+  INFO [099e95b5] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [1ad257db] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009143416; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143416'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [1ad257db] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009143416; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143416'" 1>&2; false; fi
+ DEBUG [1ad257db] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [2e03847e] Running /usr/bin/env npm install --production --silent --no-progress as deploy@172.17.0.5
+ DEBUG [2e03847e] Command: cd /home/deploy/dev/nodeapp/releases/20171009143416 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [2e03847e] 	added 166 packages in 1.748s
+  INFO [2e03847e] Finished in 2.093 seconds with exit status 0 (successful).
+  INFO [ffd1ce7b] Running /usr/bin/env hostname as deploy@172.17.0.5
+ DEBUG [ffd1ce7b] Command: /usr/bin/env hostname
+ DEBUG [ffd1ce7b] 	a689f3ee81ab
+  INFO [ffd1ce7b] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [64c4afe5] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009143416 /home/deploy/dev/nodeapp/releases/current as deploy@172.17.0.5
+ DEBUG [64c4afe5] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009143416 /home/deploy/dev/nodeapp/releases/current
+  INFO [64c4afe5] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [49ce1a44] Running /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp as deploy@172.17.0.5
+ DEBUG [49ce1a44] Command: /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp
+  INFO [49ce1a44] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [1c323081] Running cd /home/deploy/dev/nodeapp/current/ && npm start as deploy@172.17.0.5
+ DEBUG [1c323081] Command: cd /home/deploy/dev/nodeapp/current/ && npm start
+ DEBUG [1c323081] 	
+> capistrano-practice@1.0.0 start /home/deploy/dev/nodeapp/releases/20171009143416
+> forever start app.js
+
+ DEBUG [1c323081] 	[33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
+ DEBUG [1c323081] 	[33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+ DEBUG [1c323081] 	[32minfo[39m:    Forever processing file: [90mapp.js[39m
+  INFO [1c323081] Finished in 0.438 seconds with exit status 0 (successful).
+ DEBUG [62feaa6c] Running /usr/bin/env ls -x /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [62feaa6c] Command: /usr/bin/env ls -x /home/deploy/dev/nodeapp/releases
+ DEBUG [62feaa6c] 	20171009143327	20171009143416
+ DEBUG [62feaa6c] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO Keeping 2 of 2 deployed releases on 172.17.0.5
+  INFO No old releases (keeping newest 2) on 172.17.0.5
+ DEBUG [b24c7dfc] Running if test ! -d /home/deploy/dev/nodeapp/releases; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [b24c7dfc] Command: if test ! -d /home/deploy/dev/nodeapp/releases; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases'" 1>&2; false; fi
+ DEBUG [b24c7dfc] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [4a833014] Running /usr/bin/env echo "Branch node-app (at 2417ec6aeb93b0f5703e1fea663db965a37a03b3) deployed as release 20171009143416 by yogesh" >> /home/deploy/dev/nodeapp/revisions.log as deploy@172.17.0.5
+ DEBUG [4a833014] Command: cd /home/deploy/dev/nodeapp/releases && /usr/bin/env echo "Branch node-app (at 2417ec6aeb93b0f5703e1fea663db965a37a03b3) deployed as release 20171009143416 by yogesh" >> /home/deploy/dev/nodeapp/revisions.log
+  INFO [4a833014] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 20:05:01 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [44a15f48] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.5
+ DEBUG [44a15f48] Command: /usr/bin/env mkdir -p /tmp
+  INFO [44a15f48] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 100.0%
+  INFO [5ed62cc4] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh as deploy@172.17.0.5
+ DEBUG [5ed62cc4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh
+  INFO [5ed62cc4] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [8f82f804] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.5
+ DEBUG [8f82f804] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [8f82f804] 	fdddd2348be0d28c223c7c81b20d582b6e66f540	HEAD
+  INFO [8f82f804] Finished in 3.991 seconds with exit status 0 (successful).
+  INFO [41534e32] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [41534e32] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases
+  INFO [41534e32] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [e9eafde1] Running [ -f /home/deploy/dev/nodeapp/current/REVISION ] as deploy@172.17.0.5
+ DEBUG [e9eafde1] Command: [ -f /home/deploy/dev/nodeapp/current/REVISION ]
+ DEBUG [e9eafde1] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [c4bcced8] Running /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null as deploy@172.17.0.5
+ DEBUG [c4bcced8] Command: /usr/bin/env cat /home/deploy/dev/nodeapp/current/REVISION 2>/dev/null
+ DEBUG [c4bcced8] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [c4bcced8] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [278651b2] Running [ -f /home/deploy/dev/nodeapp/repo/HEAD ] as deploy@172.17.0.5
+ DEBUG [278651b2] Command: [ -f /home/deploy/dev/nodeapp/repo/HEAD ]
+ DEBUG [278651b2] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/dev/nodeapp/repo
+ DEBUG [0e59b70c] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [0e59b70c] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [0e59b70c] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [5b0e74c7] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.5
+ DEBUG [5b0e74c7] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [5b0e74c7] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [aa68526d] Running /usr/bin/env git remote update --prune as deploy@172.17.0.5
+ DEBUG [aa68526d] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [aa68526d] 	Fetching origin
+  INFO [aa68526d] Finished in 3.665 seconds with exit status 0 (successful).
+ DEBUG [bd54ba79] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [bd54ba79] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [bd54ba79] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [2b54b80d] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009143506 as deploy@172.17.0.5
+ DEBUG [2b54b80d] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009143506 )
+  INFO [2b54b80d] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [8c233e38] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009143506 as deploy@172.17.0.5
+ DEBUG [8c233e38] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009143506 )
+  INFO [8c233e38] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [b21f3320] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [b21f3320] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [b21f3320] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [662e72d1] Running /usr/bin/env git rev-list --max-count=1 node-app as deploy@172.17.0.5
+ DEBUG [662e72d1] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git rev-list --max-count=1 node-app )
+ DEBUG [662e72d1] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [662e72d1] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [4f4fcbdc] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009143506; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143506'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [4f4fcbdc] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009143506; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143506'" 1>&2; false; fi
+ DEBUG [4f4fcbdc] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [6c7ea36c] Running /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION as deploy@172.17.0.5
+ DEBUG [6c7ea36c] Command: cd /home/deploy/dev/nodeapp/releases/20171009143506 && /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION
+  INFO [6c7ea36c] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [4ed0968e] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009143506; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143506'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [4ed0968e] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009143506; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143506'" 1>&2; false; fi
+ DEBUG [4ed0968e] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [9e961ba1] Running /usr/bin/env npm install --production --silent --no-progress as deploy@172.17.0.5
+ DEBUG [9e961ba1] Command: cd /home/deploy/dev/nodeapp/releases/20171009143506 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [9e961ba1] 	added 166 packages in 1.972s
+  INFO [9e961ba1] Finished in 2.316 seconds with exit status 0 (successful).
+  INFO [05e9fad7] Running /usr/bin/env hostname as deploy@172.17.0.5
+ DEBUG [05e9fad7] Command: /usr/bin/env hostname
+ DEBUG [05e9fad7] 	a689f3ee81ab
+  INFO [05e9fad7] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [473f83d4] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009143506 /home/deploy/dev/nodeapp/releases/current as deploy@172.17.0.5
+ DEBUG [473f83d4] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009143506 /home/deploy/dev/nodeapp/releases/current
+  INFO [473f83d4] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [58733c96] Running /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp as deploy@172.17.0.5
+ DEBUG [58733c96] Command: /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp
+  INFO [58733c96] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [909e0eae] Running /usr/bin/env ls -x /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [909e0eae] Command: /usr/bin/env ls -x /home/deploy/dev/nodeapp/releases
+ DEBUG [909e0eae] 	20171009143327	20171009143416	20171009143506
+ DEBUG [909e0eae] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO Keeping 2 of 3 deployed releases on 172.17.0.5
+  INFO [dca18b99] Running /usr/bin/env rm -rf /home/deploy/dev/nodeapp/releases/20171009143327 as deploy@172.17.0.5
+ DEBUG [dca18b99] Command: /usr/bin/env rm -rf /home/deploy/dev/nodeapp/releases/20171009143327
+  INFO [dca18b99] Finished in 0.122 seconds with exit status 0 (successful).
+ DEBUG [dc07e0ba] Running if test ! -d /home/deploy/dev/nodeapp/releases; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [dc07e0ba] Command: if test ! -d /home/deploy/dev/nodeapp/releases; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases'" 1>&2; false; fi
+ DEBUG [dc07e0ba] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [24ecc390] Running /usr/bin/env echo "Branch node-app (at 2417ec6aeb93b0f5703e1fea663db965a37a03b3) deployed as release 20171009143506 by yogesh" >> /home/deploy/dev/nodeapp/revisions.log as deploy@172.17.0.5
+ DEBUG [24ecc390] Command: cd /home/deploy/dev/nodeapp/releases && /usr/bin/env echo "Branch node-app (at 2417ec6aeb93b0f5703e1fea663db965a37a03b3) deployed as release 20171009143506 by yogesh" >> /home/deploy/dev/nodeapp/revisions.log
+  INFO [24ecc390] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 20:06:01 +0530 cap nodeapp npm:start
+  INFO ---------------------------------------------------------------------------
+  INFO [f5094984] Running cd /home/deploy/dev/nodeapp/current/ && npm start as deploy@172.17.0.5
+ DEBUG [f5094984] Command: cd /home/deploy/dev/nodeapp/current/ && npm start
+ DEBUG [f5094984] 	
+> capistrano-practice@1.0.0 start /home/deploy/dev/nodeapp/releases/20171009143506
+> forever start app.js
+
+ DEBUG [f5094984] 	[33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
+ DEBUG [f5094984] 	[33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+ DEBUG [f5094984] 	[32minfo[39m:    Forever processing file: [90mapp.js[39m
+  INFO [f5094984] Finished in 0.571 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 20:06:13 +0530 cap nodeapp npm:restart
+  INFO ---------------------------------------------------------------------------
+  INFO [d252cf2a] Running cd /home/deploy/dev/nodeapp/current/ && npm restart as deploy@172.17.0.5
+ DEBUG [d252cf2a] Command: cd /home/deploy/dev/nodeapp/current/ && npm restart
+ DEBUG [d252cf2a] 	
+> capistrano-practice@1.0.0 restart /home/deploy/dev/nodeapp/releases/20171009143506
+> forever restart app.js
+
+ DEBUG [d252cf2a] 	[32minfo[39m:    Forever restarted process(es):
+ DEBUG [d252cf2a] 	[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m [37mforever[39m [37mpid[39m   [37mid[39m [35mlogfile[39m                        [33muptime[39m  
+ DEBUG [d252cf2a] 	[90mdata[39m:    [0] qioI [90m/usr/bin/node[39m [90mapp.js[39m 11958   11964    [35m/home/deploy/.forever/qioI.log[39m [31mSTOPPED[39m 
+  INFO [d252cf2a] Finished in 0.537 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 20:06:57 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a52b9506] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.5
+ DEBUG [a52b9506] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a52b9506] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 100.0%
+  INFO [8a6ffef1] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh as deploy@172.17.0.5
+ DEBUG [8a6ffef1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh
+  INFO [8a6ffef1] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [3dcb24a9] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.5
+ DEBUG [3dcb24a9] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [3dcb24a9] 	fdddd2348be0d28c223c7c81b20d582b6e66f540	HEAD
+  INFO [3dcb24a9] Finished in 3.830 seconds with exit status 0 (successful).
+  INFO [1a26003a] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [1a26003a] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared /home/deploy/dev/nodeapp/releases
+  INFO [1a26003a] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [e5d9243b] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared/node_modules as deploy@172.17.0.5
+ DEBUG [e5d9243b] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/shared/node_modules
+  INFO [e5d9243b] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [090ba3ea] Running [ -f /home/deploy/dev/nodeapp/current/REVISION ] as deploy@172.17.0.5
+ DEBUG [090ba3ea] Command: [ -f /home/deploy/dev/nodeapp/current/REVISION ]
+ DEBUG [090ba3ea] Finished in 0.007 seconds with exit status 1 (failed).
+ DEBUG [cfb3074e] Running [ -f /home/deploy/dev/nodeapp/repo/HEAD ] as deploy@172.17.0.5
+ DEBUG [cfb3074e] Command: [ -f /home/deploy/dev/nodeapp/repo/HEAD ]
+ DEBUG [cfb3074e] Finished in 0.006 seconds with exit status 1 (failed).
+ DEBUG [567d3e30] Running if test ! -d /home/deploy/dev/nodeapp; then echo "Directory does not exist '/home/deploy/dev/nodeapp'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [567d3e30] Command: if test ! -d /home/deploy/dev/nodeapp; then echo "Directory does not exist '/home/deploy/dev/nodeapp'" 1>&2; false; fi
+ DEBUG [567d3e30] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [5688b755] Running /usr/bin/env git clone --mirror git@github.com:yogesh-sinoriya/capistrano-practice.git /home/deploy/dev/nodeapp/repo as deploy@172.17.0.5
+ DEBUG [5688b755] Command: cd /home/deploy/dev/nodeapp && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git clone --mirror git@github.com:yogesh-sinoriya/capistrano-practice.git /home/deploy/dev/nodeapp/repo )
+ DEBUG [5688b755] 	Cloning into bare repository '/home/deploy/dev/nodeapp/repo'...
+  INFO [5688b755] Finished in 5.601 seconds with exit status 0 (successful).
+ DEBUG [c1986a88] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [c1986a88] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [c1986a88] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [065c549c] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.5
+ DEBUG [065c549c] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [065c549c] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [47bdfd12] Running /usr/bin/env git remote update --prune as deploy@172.17.0.5
+ DEBUG [47bdfd12] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [47bdfd12] 	Fetching origin
+  INFO [47bdfd12] Finished in 3.919 seconds with exit status 0 (successful).
+ DEBUG [3b14d04e] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [3b14d04e] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [3b14d04e] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [9aad5abf] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009143701 as deploy@172.17.0.5
+ DEBUG [9aad5abf] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009143701 )
+  INFO [9aad5abf] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [5d1aef1f] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009143701 as deploy@172.17.0.5
+ DEBUG [5d1aef1f] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /home/deploy/dev/nodeapp/releases/20171009143701 )
+  INFO [5d1aef1f] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [aa305c73] Running if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [aa305c73] Command: if test ! -d /home/deploy/dev/nodeapp/repo; then echo "Directory does not exist '/home/deploy/dev/nodeapp/repo'" 1>&2; false; fi
+ DEBUG [aa305c73] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [7c5a98a8] Running /usr/bin/env git rev-list --max-count=1 node-app as deploy@172.17.0.5
+ DEBUG [7c5a98a8] Command: cd /home/deploy/dev/nodeapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git rev-list --max-count=1 node-app )
+ DEBUG [7c5a98a8] 	2417ec6aeb93b0f5703e1fea663db965a37a03b3
+ DEBUG [7c5a98a8] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [25dfea29] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009143701; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143701'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [25dfea29] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009143701; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143701'" 1>&2; false; fi
+ DEBUG [25dfea29] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [d5c0291f] Running /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION as deploy@172.17.0.5
+ DEBUG [d5c0291f] Command: cd /home/deploy/dev/nodeapp/releases/20171009143701 && /usr/bin/env echo "2417ec6aeb93b0f5703e1fea663db965a37a03b3" >> REVISION
+  INFO [d5c0291f] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [817c5031] Running /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009143701 as deploy@172.17.0.5
+ DEBUG [817c5031] Command: /usr/bin/env mkdir -p /home/deploy/dev/nodeapp/releases/20171009143701
+  INFO [817c5031] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [653a1e8c] Running [ -L /home/deploy/dev/nodeapp/releases/20171009143701/node_modules ] as deploy@172.17.0.5
+ DEBUG [653a1e8c] Command: [ -L /home/deploy/dev/nodeapp/releases/20171009143701/node_modules ]
+ DEBUG [653a1e8c] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [29334cde] Running [ -d /home/deploy/dev/nodeapp/releases/20171009143701/node_modules ] as deploy@172.17.0.5
+ DEBUG [29334cde] Command: [ -d /home/deploy/dev/nodeapp/releases/20171009143701/node_modules ]
+ DEBUG [29334cde] Finished in 0.003 seconds with exit status 1 (failed).
+  INFO [35ae8d1f] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/shared/node_modules /home/deploy/dev/nodeapp/releases/20171009143701/node_modules as deploy@172.17.0.5
+ DEBUG [35ae8d1f] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/shared/node_modules /home/deploy/dev/nodeapp/releases/20171009143701/node_modules
+  INFO [35ae8d1f] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [758d335c] Running if test ! -d /home/deploy/dev/nodeapp/releases/20171009143701; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143701'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [758d335c] Command: if test ! -d /home/deploy/dev/nodeapp/releases/20171009143701; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases/20171009143701'" 1>&2; false; fi
+ DEBUG [758d335c] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [c38019e0] Running /usr/bin/env npm install --production --silent --no-progress as deploy@172.17.0.5
+ DEBUG [c38019e0] Command: cd /home/deploy/dev/nodeapp/releases/20171009143701 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [c38019e0] 	added 166 packages in 1.689s
+  INFO [c38019e0] Finished in 2.017 seconds with exit status 0 (successful).
+  INFO [4d3ea2f2] Running /usr/bin/env hostname as deploy@172.17.0.5
+ DEBUG [4d3ea2f2] Command: /usr/bin/env hostname
+ DEBUG [4d3ea2f2] 	a689f3ee81ab
+  INFO [4d3ea2f2] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [92308222] Running /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009143701 /home/deploy/dev/nodeapp/releases/current as deploy@172.17.0.5
+ DEBUG [92308222] Command: /usr/bin/env ln -s /home/deploy/dev/nodeapp/releases/20171009143701 /home/deploy/dev/nodeapp/releases/current
+  INFO [92308222] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [b58cc42e] Running /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp as deploy@172.17.0.5
+ DEBUG [b58cc42e] Command: /usr/bin/env mv /home/deploy/dev/nodeapp/releases/current /home/deploy/dev/nodeapp
+  INFO [b58cc42e] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [ec6ffdc0] Running /usr/bin/env ls -x /home/deploy/dev/nodeapp/releases as deploy@172.17.0.5
+ DEBUG [ec6ffdc0] Command: /usr/bin/env ls -x /home/deploy/dev/nodeapp/releases
+ DEBUG [ec6ffdc0] 	20171009143701
+ DEBUG [ec6ffdc0] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [7d114481] Running if test ! -d /home/deploy/dev/nodeapp/releases; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [7d114481] Command: if test ! -d /home/deploy/dev/nodeapp/releases; then echo "Directory does not exist '/home/deploy/dev/nodeapp/releases'" 1>&2; false; fi
+ DEBUG [7d114481] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [c09a1b6c] Running /usr/bin/env echo "Branch node-app (at 2417ec6aeb93b0f5703e1fea663db965a37a03b3) deployed as release 20171009143701 by yogesh" >> /home/deploy/dev/nodeapp/revisions.log as deploy@172.17.0.5
+ DEBUG [c09a1b6c] Command: cd /home/deploy/dev/nodeapp/releases && /usr/bin/env echo "Branch node-app (at 2417ec6aeb93b0f5703e1fea663db965a37a03b3) deployed as release 20171009143701 by yogesh" >> /home/deploy/dev/nodeapp/revisions.log
+  INFO [c09a1b6c] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 20:07:18 +0530 cap nodeapp npm:start
+  INFO ---------------------------------------------------------------------------
+  INFO [5d81c5c9] Running cd /home/deploy/dev/nodeapp/current/ && npm start as deploy@172.17.0.5
+ DEBUG [5d81c5c9] Command: cd /home/deploy/dev/nodeapp/current/ && npm start
+ DEBUG [5d81c5c9] 	
+> capistrano-practice@1.0.0 start /home/deploy/dev/nodeapp/releases/20171009143701
+> forever start app.js
+
+ DEBUG [5d81c5c9] 	[33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
+ DEBUG [5d81c5c9] 	[33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+ DEBUG [5d81c5c9] 	[32minfo[39m:    Forever processing file: [90mapp.js[39m
+  INFO [5d81c5c9] Finished in 0.542 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 20:07:27 +0530 cap nodeapp npm:stop
+  INFO ---------------------------------------------------------------------------
+  INFO [e5d09aec] Running cd /home/deploy/dev/nodeapp/current/ && npm stop as deploy@172.17.0.5
+ DEBUG [e5d09aec] Command: cd /home/deploy/dev/nodeapp/current/ && npm stop
+ DEBUG [e5d09aec] 	
+> capistrano-practice@1.0.0 stop /home/deploy/dev/nodeapp/releases/20171009143701
+> forever stop app.js
+
+ DEBUG [e5d09aec] 	[31merror[39m:   Forever cannot find process with id: app.js
+ DEBUG [e5d09aec] 	npm
+ DEBUG [e5d09aec] 	 ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! capistrano-practice@1.0.0 stop: `forever stop app.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the capistrano-practice@1.0.0 stop script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+ DEBUG [e5d09aec] 	
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/deploy/.npm/_logs/2017-10-09T14_37_27_973Z-debug.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 20:07:51 +0530 cap nodeapp npm:start
+  INFO ---------------------------------------------------------------------------
+  INFO [3781cf4b] Running cd /home/deploy/dev/nodeapp/current/ && npm start as deploy@172.17.0.5
+ DEBUG [3781cf4b] Command: cd /home/deploy/dev/nodeapp/current/ && npm start
+ DEBUG [3781cf4b] 	
+> capistrano-practice@1.0.0 start /home/deploy/dev/nodeapp/releases/20171009143701
+> forever start app.js
+
+ DEBUG [3781cf4b] 	[33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
+ DEBUG [3781cf4b] 	[33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+ DEBUG [3781cf4b] 	[32minfo[39m:    Forever processing file: [90mapp.js[39m
+  INFO [3781cf4b] Finished in 0.516 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 20:08:01 +0530 cap nodeapp npm:stop
+  INFO ---------------------------------------------------------------------------
+  INFO [b3f6fd17] Running cd /home/deploy/dev/nodeapp/current/ && npm stop as deploy@172.17.0.5
+ DEBUG [b3f6fd17] Command: cd /home/deploy/dev/nodeapp/current/ && npm stop
+ DEBUG [b3f6fd17] 	
+> capistrano-practice@1.0.0 stop /home/deploy/dev/nodeapp/releases/20171009143701
+> forever stop app.js
+
+ DEBUG [b3f6fd17] 	[31merror[39m:   Forever cannot find process with id: app.js
+ DEBUG [b3f6fd17] 	npm
+ DEBUG [b3f6fd17] 	 ERR! code ELIFECYCLE
+npm
+ DEBUG [b3f6fd17] 	 ERR! 
+ DEBUG [b3f6fd17] 	errno 1
+ DEBUG [b3f6fd17] 	npm
+ DEBUG [b3f6fd17] 	 ERR!
+ DEBUG [b3f6fd17] 	 capistrano-practice@1.0.0 stop: `forever stop app.js`
+ DEBUG [b3f6fd17] 	npm
+ DEBUG [b3f6fd17] 	 ERR!
+ DEBUG [b3f6fd17] 	 Exit status 1
+ DEBUG [b3f6fd17] 	npm
+ DEBUG [b3f6fd17] 	 
+ DEBUG [b3f6fd17] 	ERR!
+ DEBUG [b3f6fd17] 	 
+ DEBUG [b3f6fd17] 	npm 
+ DEBUG [b3f6fd17] 	ERR!
+ DEBUG [b3f6fd17] 	 Failed at the capistrano-practice@1.0.0 stop script.
+ DEBUG [b3f6fd17] 	npm
+ DEBUG [b3f6fd17] 	 
+ DEBUG [b3f6fd17] 	ERR!
+ DEBUG [b3f6fd17] 	 This is probably not a problem with npm. There is likely additional logging output above.
+ DEBUG [b3f6fd17] 	
+ DEBUG [b3f6fd17] 	npm ERR!
+ DEBUG [b3f6fd17] 	 A complete log of this run can be found in:
+npm
+ DEBUG [b3f6fd17] 	 ERR!
+ DEBUG [b3f6fd17] 	     /home/deploy/.npm/_logs/2017-10-09T14_38_02_215Z-debug.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 20:08:17 +0530 cap nodeapp npm:start
+  INFO ---------------------------------------------------------------------------
+  INFO [8b1fabdc] Running cd /home/deploy/dev/nodeapp/current/ && npm start as deploy@172.17.0.5
+ DEBUG [8b1fabdc] Command: cd /home/deploy/dev/nodeapp/current/ && npm start
+ DEBUG [8b1fabdc] 	
+> capistrano-practice@1.0.0 start /home/deploy/dev/nodeapp/releases/20171009143701
+> forever start app.js
+
+ DEBUG [8b1fabdc] 	[33mwarn[39m:    --minUptime not set. Defaulting to: 1000ms
+ DEBUG [8b1fabdc] 	[33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+ DEBUG [8b1fabdc] 	[32minfo[39m:    Forever processing file: [90mapp.js[39m
+  INFO [8b1fabdc] Finished in 0.524 seconds with exit status 0 (successful).

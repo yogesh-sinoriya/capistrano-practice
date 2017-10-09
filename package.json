@@ -15,6 +15,7 @@
     "start": "./node_modules/.bin/forever start app.js",
     "restart": "./node_modules/.bin/forever restart app.js",
     "stop": "./node_modules/.bin/forever stop app.js",
+    "stopall": "./node_modules/.bin/forever stopall",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
