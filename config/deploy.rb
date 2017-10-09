@@ -7,10 +7,17 @@ set :default_stage, "production"
 set :ssh_options, {:forward_agent => true}
 
 set :application, 'capistrano_example'
+set :applicationdir, "/home/#{user}/deploy/#{application}"
+
 set :repo_url, 'git@github.com:yogesh-sinoriya/capistrano-practice.git'
 set :user, "deploy"
 
-# set :linked_dirs, %w(my_shared_directory)
+set :linked_dirs, %w(node_modules)
+
+set :npm_target_path, -> { release_path.join('/dev/nodeapp') } # default not set
+set :npm_flags, '--production --silent --no-progress'    # default
+set :npm_roles, :all                                     # default
+set :npm_env_variables, {}                               # default
 
 namespace :deploy do
 
@@ -21,28 +28,29 @@ namespace :deploy do
         execute "hostname"
       end
     end
+end
 
-
-    desc 'Start forever'
-    task :start_forever do
+namespace :npm do
+	desc 'Start'
+    task :start do
       on roles(:app), in: :groups, limit:1 do
         execute :npm, :start, fetch(:app_command)
       end
     end
 
-    desc 'Restart forever'
-    task :restart_forever do
+    desc 'Restart'
+    task :restart do
       on roles(:app), in: :groups, limit:1 do
         execute "npm restart"
+        #execute :npm,:restart, fetch(:app_command)
       end
     end
-    desc 'Stop forever'
-    task :stop_forever do
+    desc 'Stop'
+    task :stop do
       on roles(:app), in: :groups, limit:1 do
-        execute "npm stop"
+        execute :npm, :stop, fetch(:app_command)
       end
     end
-
 end
 
 after "deploy:updated", "deploy:print_server_name"
