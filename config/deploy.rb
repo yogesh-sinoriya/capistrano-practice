@@ -2,7 +2,7 @@
 # require 'capistrano/ext/multistage'
 lock '3.9.1'
 
-set :stages, ["production"]
+#set :stages, ["production"]
 set :default_stage, "production"
 set :ssh_options, {:forward_agent => true}
 
