@@ -22,6 +22,27 @@ namespace :deploy do
       end
     end
 
+
+    desc 'Start forever'
+    task :start_forever do
+      on roles(:app), in: :groups, limit:1 do
+        execute "npm start"
+      end
+    end
+
+    desc 'Restart forever'
+    task :restart_forever do
+      on roles(:app), in: :groups, limit:1 do
+        execute "npm restart"
+      end
+    end
+    desc 'Stop forever'
+    task :stop_forever do
+      on roles(:app), in: :groups, limit:1 do
+        execute "npm stop"
+      end
+    end
+
 end
 
 after "deploy:updated", "deploy:print_server_name"

@@ -1391,3 +1391,159 @@ tar: Exiting with failure status due to previous errors
   INFO [a315b563] Running /usr/bin/env echo "Branch master (at fdddd2348be0d28c223c7c81b20d582b6e66f540) deployed as release 20171009100429 by yogesh" >> /usr/share/nginx/www-data/revisions.log as deploy@172.17.0.5
  DEBUG [a315b563] Command: cd /usr/share/nginx/www-data/releases && /usr/bin/env echo "Branch master (at fdddd2348be0d28c223c7c81b20d582b6e66f540) deployed as release 20171009100429 by yogesh" >> /usr/share/nginx/www-data/revisions.log
   INFO [a315b563] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 15:37:48 +0530 cap develop deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [0dbee673] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.5
+ DEBUG [0dbee673] Command: /usr/bin/env mkdir -p /tmp
+  INFO [0dbee673] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-develop-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-develop-yogesh.sh 100.0%
+  INFO [0b432d16] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-develop-yogesh.sh as deploy@172.17.0.5
+ DEBUG [0b432d16] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-develop-yogesh.sh
+  INFO [0b432d16] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [ff84f071] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.5
+ DEBUG [ff84f071] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-develop-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [ff84f071] 	fdddd2348be0d28c223c7c81b20d582b6e66f540	HEAD
+  INFO [ff84f071] Finished in 6.100 seconds with exit status 0 (successful).
+  INFO [6e23ffb0] Running /usr/bin/env mkdir -p /usr/share/nginx/www-data/shared /usr/share/nginx/www-data/releases as deploy@172.17.0.5
+ DEBUG [6e23ffb0] Command: /usr/bin/env mkdir -p /usr/share/nginx/www-data/shared /usr/share/nginx/www-data/releases
+  INFO [6e23ffb0] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [e37f95e0] Running /usr/bin/env mkdir -p /usr/share/nginx/www-data/shared/my_shared_directory as deploy@172.17.0.5
+ DEBUG [e37f95e0] Command: /usr/bin/env mkdir -p /usr/share/nginx/www-data/shared/my_shared_directory
+  INFO [e37f95e0] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [78e8d824] Running [ -f /usr/share/nginx/www-data/current/REVISION ] as deploy@172.17.0.5
+ DEBUG [78e8d824] Command: [ -f /usr/share/nginx/www-data/current/REVISION ]
+ DEBUG [78e8d824] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [8365b68b] Running /usr/bin/env cat /usr/share/nginx/www-data/current/REVISION 2>/dev/null as deploy@172.17.0.5
+ DEBUG [8365b68b] Command: /usr/bin/env cat /usr/share/nginx/www-data/current/REVISION 2>/dev/null
+ DEBUG [8365b68b] 	fdddd2348be0d28c223c7c81b20d582b6e66f540
+ DEBUG [8365b68b] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [b08be30a] Running [ -f /usr/share/nginx/www-data/repo/HEAD ] as deploy@172.17.0.5
+ DEBUG [b08be30a] Command: [ -f /usr/share/nginx/www-data/repo/HEAD ]
+ DEBUG [b08be30a] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /usr/share/nginx/www-data/repo
+ DEBUG [7dd948fe] Running if test ! -d /usr/share/nginx/www-data/repo; then echo "Directory does not exist '/usr/share/nginx/www-data/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [7dd948fe] Command: if test ! -d /usr/share/nginx/www-data/repo; then echo "Directory does not exist '/usr/share/nginx/www-data/repo'" 1>&2; false; fi
+ DEBUG [7dd948fe] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [26c0c6c7] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.5
+ DEBUG [26c0c6c7] Command: cd /usr/share/nginx/www-data/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-develop-yogesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [26c0c6c7] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [f67793a4] Running /usr/bin/env git remote update --prune as deploy@172.17.0.5
+ DEBUG [f67793a4] Command: cd /usr/share/nginx/www-data/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-develop-yogesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f67793a4] 	Fetching origin
+ DEBUG [f67793a4] 	From github.com:yogesh-sinoriya/capistrano-practice
+ * [new branch]      develop    -> develop
+  INFO [f67793a4] Finished in 7.046 seconds with exit status 0 (successful).
+ DEBUG [195f8a3b] Running if test ! -d /usr/share/nginx/www-data/repo; then echo "Directory does not exist '/usr/share/nginx/www-data/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [195f8a3b] Command: if test ! -d /usr/share/nginx/www-data/repo; then echo "Directory does not exist '/usr/share/nginx/www-data/repo'" 1>&2; false; fi
+ DEBUG [195f8a3b] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [c9a813a5] Running /usr/bin/env mkdir -p /usr/share/nginx/www-data/releases/20171009100754 as deploy@172.17.0.5
+ DEBUG [c9a813a5] Command: cd /usr/share/nginx/www-data/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-develop-yogesh.sh" ; /usr/bin/env mkdir -p /usr/share/nginx/www-data/releases/20171009100754 )
+  INFO [c9a813a5] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [179886b9] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /usr/share/nginx/www-data/releases/20171009100754 as deploy@172.17.0.5
+ DEBUG [179886b9] Command: cd /usr/share/nginx/www-data/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-develop-yogesh.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /usr/share/nginx/www-data/releases/20171009100754 )
+  INFO [179886b9] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [a72e663d] Running if test ! -d /usr/share/nginx/www-data/repo; then echo "Directory does not exist '/usr/share/nginx/www-data/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [a72e663d] Command: if test ! -d /usr/share/nginx/www-data/repo; then echo "Directory does not exist '/usr/share/nginx/www-data/repo'" 1>&2; false; fi
+ DEBUG [a72e663d] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [f1891395] Running /usr/bin/env git rev-list --max-count=1 develop as deploy@172.17.0.5
+ DEBUG [f1891395] Command: cd /usr/share/nginx/www-data/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-develop-yogesh.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [f1891395] 	d40549e2049dc0672a85d5f7a7109298707612a5
+ DEBUG [f1891395] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [83f1e727] Running if test ! -d /usr/share/nginx/www-data/releases/20171009100754; then echo "Directory does not exist '/usr/share/nginx/www-data/releases/20171009100754'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [83f1e727] Command: if test ! -d /usr/share/nginx/www-data/releases/20171009100754; then echo "Directory does not exist '/usr/share/nginx/www-data/releases/20171009100754'" 1>&2; false; fi
+ DEBUG [83f1e727] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [4718e850] Running /usr/bin/env echo "d40549e2049dc0672a85d5f7a7109298707612a5" >> REVISION as deploy@172.17.0.5
+ DEBUG [4718e850] Command: cd /usr/share/nginx/www-data/releases/20171009100754 && /usr/bin/env echo "d40549e2049dc0672a85d5f7a7109298707612a5" >> REVISION
+  INFO [4718e850] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [56dfe4da] Running /usr/bin/env mkdir -p /usr/share/nginx/www-data/releases/20171009100754 as deploy@172.17.0.5
+ DEBUG [56dfe4da] Command: /usr/bin/env mkdir -p /usr/share/nginx/www-data/releases/20171009100754
+  INFO [56dfe4da] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [b57f7234] Running [ -L /usr/share/nginx/www-data/releases/20171009100754/my_shared_directory ] as deploy@172.17.0.5
+ DEBUG [b57f7234] Command: [ -L /usr/share/nginx/www-data/releases/20171009100754/my_shared_directory ]
+ DEBUG [b57f7234] Finished in 0.003 seconds with exit status 1 (failed).
+ DEBUG [dae6b794] Running [ -d /usr/share/nginx/www-data/releases/20171009100754/my_shared_directory ] as deploy@172.17.0.5
+ DEBUG [dae6b794] Command: [ -d /usr/share/nginx/www-data/releases/20171009100754/my_shared_directory ]
+ DEBUG [dae6b794] Finished in 0.003 seconds with exit status 1 (failed).
+  INFO [0edfef54] Running /usr/bin/env ln -s /usr/share/nginx/www-data/shared/my_shared_directory /usr/share/nginx/www-data/releases/20171009100754/my_shared_directory as deploy@172.17.0.5
+ DEBUG [0edfef54] Command: /usr/bin/env ln -s /usr/share/nginx/www-data/shared/my_shared_directory /usr/share/nginx/www-data/releases/20171009100754/my_shared_directory
+  INFO [0edfef54] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [f6cf0b38] Running /usr/bin/env hostname as deploy@172.17.0.5
+ DEBUG [f6cf0b38] Command: /usr/bin/env hostname
+ DEBUG [f6cf0b38] 	a689f3ee81ab
+  INFO [f6cf0b38] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [dd9375c2] Running /usr/bin/env ln -s /usr/share/nginx/www-data/releases/20171009100754 /usr/share/nginx/www-data/releases/current as deploy@172.17.0.5
+ DEBUG [dd9375c2] Command: /usr/bin/env ln -s /usr/share/nginx/www-data/releases/20171009100754 /usr/share/nginx/www-data/releases/current
+  INFO [dd9375c2] Finished in 0.010 seconds with exit status 0 (successful).
+  INFO [5cbb0a37] Running /usr/bin/env mv /usr/share/nginx/www-data/releases/current /usr/share/nginx/www-data as deploy@172.17.0.5
+ DEBUG [5cbb0a37] Command: /usr/bin/env mv /usr/share/nginx/www-data/releases/current /usr/share/nginx/www-data
+  INFO [5cbb0a37] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [92a72a17] Running /usr/bin/env ls -x /usr/share/nginx/www-data/releases as deploy@172.17.0.5
+ DEBUG [92a72a17] Command: /usr/bin/env ls -x /usr/share/nginx/www-data/releases
+ DEBUG [92a72a17] 	20171009100321	20171009100429	20171009100754
+ DEBUG [92a72a17] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO Keeping 2 of 3 deployed releases on 172.17.0.5
+  INFO [28188142] Running /usr/bin/env rm -rf /usr/share/nginx/www-data/releases/20171009100321 as deploy@172.17.0.5
+ DEBUG [28188142] Command: /usr/bin/env rm -rf /usr/share/nginx/www-data/releases/20171009100321
+  INFO [28188142] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [91e5e5b3] Running if test ! -d /usr/share/nginx/www-data/releases; then echo "Directory does not exist '/usr/share/nginx/www-data/releases'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [91e5e5b3] Command: if test ! -d /usr/share/nginx/www-data/releases; then echo "Directory does not exist '/usr/share/nginx/www-data/releases'" 1>&2; false; fi
+ DEBUG [91e5e5b3] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [8373d3d5] Running /usr/bin/env echo "Branch develop (at d40549e2049dc0672a85d5f7a7109298707612a5) deployed as release 20171009100754 by yogesh" >> /usr/share/nginx/www-data/revisions.log as deploy@172.17.0.5
+ DEBUG [8373d3d5] Command: cd /usr/share/nginx/www-data/releases && /usr/bin/env echo "Branch develop (at d40549e2049dc0672a85d5f7a7109298707612a5) deployed as release 20171009100754 by yogesh" >> /usr/share/nginx/www-data/revisions.log
+  INFO [8373d3d5] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 15:38:24 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [eeae3c68] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.5
+ DEBUG [eeae3c68] Command: /usr/bin/env mkdir -p /tmp
+  INFO [eeae3c68] Finished in 0.139 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh 100.0%
+  INFO [d82e8cf6] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh as deploy@172.17.0.5
+ DEBUG [d82e8cf6] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh
+  INFO [d82e8cf6] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [e72332a3] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.5
+ DEBUG [e72332a3] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [e72332a3] 	fdddd2348be0d28c223c7c81b20d582b6e66f540	HEAD
+  INFO [e72332a3] Finished in 7.375 seconds with exit status 0 (successful).
+  INFO [7728d81f] Running /usr/bin/env mkdir -p /usr/share/nginx/www-data/shared /usr/share/nginx/www-data/releases as deploy@172.17.0.5
+ DEBUG [7728d81f] Command: /usr/bin/env mkdir -p /usr/share/nginx/www-data/shared /usr/share/nginx/www-data/releases
+  INFO [7728d81f] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [83e36afb] Running /usr/bin/env mkdir -p /usr/share/nginx/www-data/shared/my_shared_directory as deploy@172.17.0.5
+ DEBUG [83e36afb] Command: /usr/bin/env mkdir -p /usr/share/nginx/www-data/shared/my_shared_directory
+  INFO [83e36afb] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [73369a03] Running [ -f /usr/share/nginx/www-data/current/REVISION ] as deploy@172.17.0.5
+ DEBUG [73369a03] Command: [ -f /usr/share/nginx/www-data/current/REVISION ]
+ DEBUG [73369a03] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [9a6838a3] Running /usr/bin/env cat /usr/share/nginx/www-data/current/REVISION 2>/dev/null as deploy@172.17.0.5
+ DEBUG [9a6838a3] Command: /usr/bin/env cat /usr/share/nginx/www-data/current/REVISION 2>/dev/null
+ DEBUG [9a6838a3] 	d40549e2049dc0672a85d5f7a7109298707612a5
+ DEBUG [9a6838a3] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [fba7531a] Running [ -f /usr/share/nginx/www-data/repo/HEAD ] as deploy@172.17.0.5
+ DEBUG [fba7531a] Command: [ -f /usr/share/nginx/www-data/repo/HEAD ]
+ DEBUG [fba7531a] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /usr/share/nginx/www-data/repo
+ DEBUG [9b567ace] Running if test ! -d /usr/share/nginx/www-data/repo; then echo "Directory does not exist '/usr/share/nginx/www-data/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [9b567ace] Command: if test ! -d /usr/share/nginx/www-data/repo; then echo "Directory does not exist '/usr/share/nginx/www-data/repo'" 1>&2; false; fi
+ DEBUG [9b567ace] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [57c4877d] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.5
+ DEBUG [57c4877d] Command: cd /usr/share/nginx/www-data/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [57c4877d] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [df47cffa] Running /usr/bin/env git remote update --prune as deploy@172.17.0.5
+ DEBUG [df47cffa] Command: cd /usr/share/nginx/www-data/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [df47cffa] 	Fetching origin
+  INFO [df47cffa] Finished in 13.766 seconds with exit status 0 (successful).
+ DEBUG [af0fa0c0] Running if test ! -d /usr/share/nginx/www-data/repo; then echo "Directory does not exist '/usr/share/nginx/www-data/repo'" 1>&2; false; fi as deploy@172.17.0.5
+ DEBUG [af0fa0c0] Command: if test ! -d /usr/share/nginx/www-data/repo; then echo "Directory does not exist '/usr/share/nginx/www-data/repo'" 1>&2; false; fi
+ DEBUG [af0fa0c0] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [b26c72ad] Running /usr/bin/env mkdir -p /usr/share/nginx/www-data/releases/20171009100832 as deploy@172.17.0.5
+ DEBUG [b26c72ad] Command: cd /usr/share/nginx/www-data/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env mkdir -p /usr/share/nginx/www-data/releases/20171009100832 )
+  INFO [b26c72ad] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [00846b94] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /usr/share/nginx/www-data/releases/20171009100832 as deploy@172.17.0.5
+ DEBUG [00846b94] Command: cd /usr/share/nginx/www-data/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-yogesh.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /usr/share/nginx/www-data/releases/20171009100832 )
+ DEBUG [00846b94] 	fatal: Not a valid object name
+ DEBUG [00846b94] 	tar: 
+ DEBUG [00846b94] 	This does not look like a tar archive
+ DEBUG [00846b94] 	tar: Exiting with failure status due to previous errors

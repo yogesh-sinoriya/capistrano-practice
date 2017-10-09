@@ -1,0 +1,27 @@
+{
+  "name": "capistrano-practice",
+  "version": "1.0.0",
+  "description": "#### Remote ```  adduser deploy ```",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start":"./node_modules/.bin/forever start app.js",
+    "restart":"./node_modules/.bin/forever restart app.js",
+    "stop":"./node_modules/.bin/forever stop app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yogesh-sinoriya/capistrano-practice.git"
+  },
+  "author": "yogesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yogesh-sinoriya/capistrano-practice/issues"
+  },
+  "homepage": "https://github.com/yogesh-sinoriya/capistrano-practice#readme"
+}
