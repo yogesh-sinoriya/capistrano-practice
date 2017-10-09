@@ -10,7 +10,7 @@ set :application, 'capistrano_example'
 set :repo_url, 'git@github.com:yogesh-sinoriya/capistrano-practice.git'
 set :user, "deploy"
 
-set :linked_dirs, %w(node_modules)
+#set :linked_dirs, %w(node_modules)
 
 
 namespace :deploy do
