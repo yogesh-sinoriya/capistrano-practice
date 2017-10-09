@@ -6,7 +6,14 @@ adduser deploy
 ```
 
 Follow Link to install ruby [2.2](https://www.brightbox.com/blog/2015/01/05/ruby-2-2-0-packages-for-ubuntu/) 
-Follow Link to install 	[nvm](https://eureka.ykyuen.info/2014/05/07/ubuntu-install-node-ver%C2%ADsion-man%C2%ADager-globally-for-all-users/) 
+
+install "software-properties-common" in not work
+
+gem installation
+``` gem install capistrano-npm ```
+
+
+Follow Link to install 	[nodejs](https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/) 
 
 #### From Local
 ```sh
