@@ -6,7 +6,9 @@
   "directories": {
     "lib": "lib"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.16.1"
+  },
   "devDependencies": {},
   "scripts": {
     "start": "./node_modules/.bin/forever start app.js",

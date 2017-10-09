@@ -10,4 +10,4 @@ set :keep_releases, 2
 
 after 'deploy:publishing', 'deploy:restart'
 after 'deploy:restart', 'deploy:npm_install'
-after 'deploy:npm_install', 'deploy:restart_forvere'
+after 'deploy:npm_install', 'deploy:start_forever'

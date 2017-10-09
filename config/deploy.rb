@@ -10,7 +10,7 @@ set :application, 'capistrano_example'
 set :repo_url, 'git@github.com:yogesh-sinoriya/capistrano-practice.git'
 set :user, "deploy"
 
-set :linked_dirs, %w(my_shared_directory)
+# set :linked_dirs, %w(my_shared_directory)
 
 namespace :deploy do
 
@@ -26,7 +26,7 @@ namespace :deploy do
     desc 'Start forever'
     task :start_forever do
       on roles(:app), in: :groups, limit:1 do
-        execute "npm start"
+        execute :npm, :start, fetch(:app_command)
       end
     end
 
