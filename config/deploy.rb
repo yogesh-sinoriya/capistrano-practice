@@ -43,13 +43,6 @@ namespace :deploy do
       end
     end
 
-    desc 'Package installation'
-    task :npm_install do
-      on roles(:app), in: :groups, limit:1 do
-        execute "npm install"
-      end
-    end
-
 end
 
 after "deploy:updated", "deploy:print_server_name"

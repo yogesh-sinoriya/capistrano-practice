@@ -9,5 +9,4 @@ server '172.17.0.5', user: 'deploy', roles: %w{web app db}
 set :keep_releases, 2
 
 after 'deploy:publishing', 'deploy:restart'
-after 'deploy:restart', 'deploy:npm_install'
-after 'deploy:npm_install', 'deploy:start_forever'
+after 'deploy:restart', 'deploy:start_forever'
