@@ -7,17 +7,15 @@ set :default_stage, "production"
 set :ssh_options, {:forward_agent => true}
 
 set :application, 'capistrano_example'
-set :applicationdir, "/home/#{user}/deploy/#{application}"
-
 set :repo_url, 'git@github.com:yogesh-sinoriya/capistrano-practice.git'
 set :user, "deploy"
 
 set :linked_dirs, %w(node_modules)
 
-set :npm_target_path, -> { release_path.join('/dev/nodeapp') } # default not set
-set :npm_flags, '--production --silent --no-progress'    # default
-set :npm_roles, :all                                     # default
-set :npm_env_variables, {}                               # default
+set :npm_target_path, '/home/deploy/dev/nodeapp/current/' #-> { release_path.join('/home/deploy/dev/nodeapp') } # default not set
+# set :npm_flags, '--production --silent --no-progress'    # default
+# set :npm_roles, :all                                     # default
+# set :npm_env_variables, {}                               # default
 
 namespace :deploy do
 
@@ -31,6 +29,7 @@ namespace :deploy do
 end
 
 namespace :npm do
+
 	desc 'Start'
     task :start do
       on roles(:app), in: :groups, limit:1 do
@@ -41,7 +40,7 @@ namespace :npm do
     desc 'Restart'
     task :restart do
       on roles(:app), in: :groups, limit:1 do
-        execute "npm restart"
+        execute "cd #{npm_target_path} && ./node_modules/.bin/forever start app.js"
         #execute :npm,:restart, fetch(:app_command)
       end
     end

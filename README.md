@@ -14,7 +14,7 @@ gem installation
 
 
 Follow Link to install 	[nodejs](https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/) 
-
+install forever " npm i -g forever"
 #### From Local
 ```sh
 ssh-copy-id -i remote-host
