@@ -17,8 +17,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
-                sh 'npm stop'
+                echo 'Deploying....''
             }
         }
     }
