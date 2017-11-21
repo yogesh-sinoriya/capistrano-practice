@@ -12,7 +12,7 @@ pipeline {
             steps {
 
                 echo 'Testing..'
-                sh 'node app.js'
+                sh 'npm start'
                 sh 'npm test'
             }
         }
