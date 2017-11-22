@@ -22,7 +22,6 @@ pipeline {
             }
             steps {
                 echo 'Deploying....'
-                checkout scm
                 sh 'cap nodeapp deploy'
                 sh 'cap nodeapp npm:install'
                 sh 'cap nodeapp npm:restart'
