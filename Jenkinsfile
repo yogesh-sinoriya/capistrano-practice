@@ -11,9 +11,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing....'
-                sh 'npm restart'
+                sh 'node app.js'
                 sh 'npm test'
-                sh 'npm stop'
             }
         }
         stage('Deploy') {
