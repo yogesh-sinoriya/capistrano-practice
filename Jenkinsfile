@@ -22,9 +22,10 @@ pipeline {
             }
             steps {
                 echo 'Deploying....'
-                sh 'bundle exec cap nodeapp deploy'
-                sh 'bundle exec cap nodeapp npm:install'
-                sh 'bundle exec cap nodeapp npm:restart'
+                checkout scm
+                sh 'cap nodeapp deploy'
+                sh 'cap nodeapp npm:install'
+                sh 'cap nodeapp npm:restart'
             }
         }
     }
