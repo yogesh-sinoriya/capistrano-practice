@@ -17,7 +17,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....''
+                echo 'Deploying....'
+                sh 'cap nodeapp deploy'
+                sh 'cap nodeapp npm:install'
+                sh 'cap nodeapp npm:restart'
             }
         }
     }

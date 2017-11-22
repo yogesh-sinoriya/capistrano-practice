@@ -6120,3 +6120,16 @@ npm
  DEBUG [45f46f6c] 	[33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
  DEBUG [45f46f6c] 	[32minfo[39m:    Forever processing file: [90mapp.js[39m
   INFO [45f46f6c] Finished in 0.663 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-22 14:06:11 +0530 cap nodeapp npm:restart
+  INFO ---------------------------------------------------------------------------
+  INFO [4b3f039b] Running cd /home/deploy/dev/nodeapp/current/ && npm restart as deploy@172.17.0.3
+ DEBUG [4b3f039b] Command: cd /home/deploy/dev/nodeapp/current/ && npm restart
+ DEBUG [4b3f039b] 	
+> capistrano-practice@1.0.0 restart /home/deploy/dev/nodeapp/releases/20171122065527
+> forever restart app.js
+
+ DEBUG [4b3f039b] 	[32minfo[39m:    Forever restarted process(es):
+ DEBUG [4b3f039b] 	[90mdata[39m:    [37m   [39m [37muid[39m  [90mcommand[39m       [90mscript[39m [37mforever[39m [37mpid[39m [37mid[39m [35mlogfile[39m                        [33muptime[39m        
+ DEBUG [4b3f039b] 	[90mdata[39m:    [0] 5dan [90m/usr/bin/node[39m [90mapp.js[39m 236     242    [35m/home/deploy/.forever/5dan.log[39m [33m0:1:39:53.260[39m 
+  INFO [4b3f039b] Finished in 5.726 seconds with exit status 0 (successful).
