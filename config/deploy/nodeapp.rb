@@ -2,10 +2,8 @@
 set :deploy_via, :remote_cache
 set :use_sudo, false
 set :branch, 'node-app'
-set :deploy_to, "/home/deploy/dev/nodeapp"
+set :deploy_to, "/usr/share/nginx/node/"
 
 server '172.17.0.3', user: 'deploy', roles: %w{web app db}
-
-set :keep_releases, 2
 
 after 'deploy:publishing', 'deploy:restart'

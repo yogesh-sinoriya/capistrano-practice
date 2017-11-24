@@ -57,4 +57,14 @@ namespace :npm do
     end
 end
 
+
+set :ssh_options, { 
+  keys: %w(~/.ssh/id_rsa),
+  :forward_agent => true,
+  auth_methods: %w(publickey)
+}
+
+set :keep_releases, 5
+set :use_sudo, false
+
 after "deploy:updated", "deploy:print_server_name"
