@@ -6396,3 +6396,168 @@ npm
  DEBUG [474b6053] 	[33mwarn[39m:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
  DEBUG [474b6053] 	[32minfo[39m:    Forever processing file: [90mapp.js[39m
   INFO [474b6053] Finished in 0.540 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-24 14:59:51 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b782ee1b] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.3
+ DEBUG [b782ee1b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [b782ee1b] Finished in 0.626 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-cloud.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-cloud.sh 100.0%
+  INFO [2c45b93b] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-cloud.sh as deploy@172.17.0.3
+ DEBUG [2c45b93b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-cloud.sh
+  INFO [2c45b93b] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [1ee4ff48] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.3
+ DEBUG [1ee4ff48] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [1ee4ff48] 	Warning: Permanently added 'github.com,192.30.255.113' (RSA) to the list of known hosts.
+ DEBUG [1ee4ff48] 	24e0be59b740371203600177286de6e457089048	HEAD
+  INFO [1ee4ff48] Finished in 4.277 seconds with exit status 0 (successful).
+  INFO [2672f2cb] Running /usr/bin/env mkdir -p /usr/share/nginx/node/shared /usr/share/nginx/node/releases as deploy@172.17.0.3
+ DEBUG [2672f2cb] Command: /usr/bin/env mkdir -p /usr/share/nginx/node/shared /usr/share/nginx/node/releases
+ DEBUG [2672f2cb] 	mkdir: cannot create directory '/usr/share/nginx/node/shared': Permission denied
+mkdir: cannot create directory '/usr/share/nginx/node/releases': Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-24 15:01:24 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [746f8530] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.3
+ DEBUG [746f8530] Command: /usr/bin/env mkdir -p /tmp
+  INFO [746f8530] Finished in 0.172 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-cloud.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-cloud.sh 100.0%
+  INFO [068e964c] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-cloud.sh as deploy@172.17.0.3
+ DEBUG [068e964c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-cloud.sh
+  INFO [068e964c] Finished in 0.043 seconds with exit status 0 (successful).
+  INFO [e92bc9e1] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.3
+ DEBUG [e92bc9e1] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [e92bc9e1] 	24e0be59b740371203600177286de6e457089048	HEAD
+  INFO [e92bc9e1] Finished in 5.346 seconds with exit status 0 (successful).
+  INFO [3482ea0c] Running /usr/bin/env mkdir -p /usr/share/nginx/node/shared /usr/share/nginx/node/releases as deploy@172.17.0.3
+ DEBUG [3482ea0c] Command: /usr/bin/env mkdir -p /usr/share/nginx/node/shared /usr/share/nginx/node/releases
+  INFO [3482ea0c] Finished in 0.043 seconds with exit status 0 (successful).
+ DEBUG [53e86963] Running [ -f /usr/share/nginx/node/current/REVISION ] as deploy@172.17.0.3
+ DEBUG [53e86963] Command: [ -f /usr/share/nginx/node/current/REVISION ]
+ DEBUG [53e86963] Finished in 0.043 seconds with exit status 1 (failed).
+ DEBUG [0efe5f5e] Running [ -f /usr/share/nginx/node/repo/HEAD ] as deploy@172.17.0.3
+ DEBUG [0efe5f5e] Command: [ -f /usr/share/nginx/node/repo/HEAD ]
+ DEBUG [0efe5f5e] Finished in 0.043 seconds with exit status 1 (failed).
+ DEBUG [8e2850e7] Running if test ! -d /usr/share/nginx/node/; then echo "Directory does not exist '/usr/share/nginx/node/'" 1>&2; false; fi as deploy@172.17.0.3
+ DEBUG [8e2850e7] Command: if test ! -d /usr/share/nginx/node/; then echo "Directory does not exist '/usr/share/nginx/node/'" 1>&2; false; fi
+ DEBUG [8e2850e7] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO [76bf346b] Running /usr/bin/env git clone --mirror git@github.com:yogesh-sinoriya/capistrano-practice.git /usr/share/nginx/node/repo as deploy@172.17.0.3
+ DEBUG [76bf346b] Command: cd /usr/share/nginx/node/ && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env git clone --mirror git@github.com:yogesh-sinoriya/capistrano-practice.git /usr/share/nginx/node/repo )
+ DEBUG [76bf346b] 	Cloning into bare repository '/usr/share/nginx/node/repo'...
+ DEBUG [76bf346b] 	Warning: Permanently added the RSA host key for IP address '192.30.255.112' to the list of known hosts.
+  INFO [76bf346b] Finished in 5.695 seconds with exit status 0 (successful).
+ DEBUG [7208fcf9] Running if test ! -d /usr/share/nginx/node/repo; then echo "Directory does not exist '/usr/share/nginx/node/repo'" 1>&2; false; fi as deploy@172.17.0.3
+ DEBUG [7208fcf9] Command: if test ! -d /usr/share/nginx/node/repo; then echo "Directory does not exist '/usr/share/nginx/node/repo'" 1>&2; false; fi
+ DEBUG [7208fcf9] Finished in 0.041 seconds with exit status 0 (successful).
+  INFO [c95569e7] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.3
+ DEBUG [c95569e7] Command: cd /usr/share/nginx/node/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [c95569e7] Finished in 0.045 seconds with exit status 0 (successful).
+  INFO [6b36ca3a] Running /usr/bin/env git remote update --prune as deploy@172.17.0.3
+ DEBUG [6b36ca3a] Command: cd /usr/share/nginx/node/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [6b36ca3a] 	Fetching origin
+  INFO [6b36ca3a] Finished in 4.101 seconds with exit status 0 (successful).
+ DEBUG [38037781] Running if test ! -d /usr/share/nginx/node/repo; then echo "Directory does not exist '/usr/share/nginx/node/repo'" 1>&2; false; fi as deploy@172.17.0.3
+ DEBUG [38037781] Command: if test ! -d /usr/share/nginx/node/repo; then echo "Directory does not exist '/usr/share/nginx/node/repo'" 1>&2; false; fi
+ DEBUG [38037781] Finished in 0.043 seconds with exit status 0 (successful).
+  INFO [bf72ca0a] Running /usr/bin/env mkdir -p /usr/share/nginx/node/releases/20171124093130 as deploy@172.17.0.3
+ DEBUG [bf72ca0a] Command: cd /usr/share/nginx/node/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env mkdir -p /usr/share/nginx/node/releases/20171124093130 )
+  INFO [bf72ca0a] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [87abd225] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /usr/share/nginx/node/releases/20171124093130 as deploy@172.17.0.3
+ DEBUG [87abd225] Command: cd /usr/share/nginx/node/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /usr/share/nginx/node/releases/20171124093130 )
+  INFO [87abd225] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [a3f66f13] Running if test ! -d /usr/share/nginx/node/repo; then echo "Directory does not exist '/usr/share/nginx/node/repo'" 1>&2; false; fi as deploy@172.17.0.3
+ DEBUG [a3f66f13] Command: if test ! -d /usr/share/nginx/node/repo; then echo "Directory does not exist '/usr/share/nginx/node/repo'" 1>&2; false; fi
+ DEBUG [a3f66f13] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG [4652c315] Running /usr/bin/env git rev-list --max-count=1 node-app as deploy@172.17.0.3
+ DEBUG [4652c315] Command: cd /usr/share/nginx/node/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env git rev-list --max-count=1 node-app )
+ DEBUG [4652c315] 	1e283ac30d58543c132650036cfab591b2d33180
+ DEBUG [4652c315] Finished in 0.042 seconds with exit status 0 (successful).
+ DEBUG [95bc19f6] Running if test ! -d /usr/share/nginx/node/releases/20171124093130; then echo "Directory does not exist '/usr/share/nginx/node/releases/20171124093130'" 1>&2; false; fi as deploy@172.17.0.3
+ DEBUG [95bc19f6] Command: if test ! -d /usr/share/nginx/node/releases/20171124093130; then echo "Directory does not exist '/usr/share/nginx/node/releases/20171124093130'" 1>&2; false; fi
+ DEBUG [95bc19f6] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [2027ab8f] Running /usr/bin/env echo "1e283ac30d58543c132650036cfab591b2d33180" >> REVISION as deploy@172.17.0.3
+ DEBUG [2027ab8f] Command: cd /usr/share/nginx/node/releases/20171124093130 && /usr/bin/env echo "1e283ac30d58543c132650036cfab591b2d33180" >> REVISION
+  INFO [2027ab8f] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [30601b3b] Running if test ! -d /usr/share/nginx/node/releases/20171124093130; then echo "Directory does not exist '/usr/share/nginx/node/releases/20171124093130'" 1>&2; false; fi as deploy@172.17.0.3
+ DEBUG [30601b3b] Command: if test ! -d /usr/share/nginx/node/releases/20171124093130; then echo "Directory does not exist '/usr/share/nginx/node/releases/20171124093130'" 1>&2; false; fi
+ DEBUG [30601b3b] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [28f1a473] Running /usr/bin/env npm install --production --silent --no-progress as deploy@172.17.0.3
+ DEBUG [28f1a473] Command: cd /usr/share/nginx/node/releases/20171124093130 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [28f1a473] 	/usr/bin/env: npm: No such file or directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-24 15:05:03 +0530 cap nodeapp deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [497af6d1] Running /usr/bin/env mkdir -p /tmp as deploy@172.17.0.3
+ DEBUG [497af6d1] Command: /usr/bin/env mkdir -p /tmp
+  INFO [497af6d1] Finished in 0.176 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano_example-nodeapp-cloud.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano_example-nodeapp-cloud.sh 100.0%
+  INFO [6b8d9d38] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-cloud.sh as deploy@172.17.0.3
+ DEBUG [6b8d9d38] Command: /usr/bin/env chmod 700 /tmp/git-ssh-capistrano_example-nodeapp-cloud.sh
+  INFO [6b8d9d38] Finished in 0.043 seconds with exit status 0 (successful).
+  INFO [9ca3b5fb] Running /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD as deploy@172.17.0.3
+ DEBUG [9ca3b5fb] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env git ls-remote git@github.com:yogesh-sinoriya/capistrano-practice.git HEAD )
+ DEBUG [9ca3b5fb] 	24e0be59b740371203600177286de6e457089048	HEAD
+  INFO [9ca3b5fb] Finished in 4.633 seconds with exit status 0 (successful).
+  INFO [56cd0b37] Running /usr/bin/env mkdir -p /usr/share/nginx/node/shared /usr/share/nginx/node/releases as deploy@172.17.0.3
+ DEBUG [56cd0b37] Command: /usr/bin/env mkdir -p /usr/share/nginx/node/shared /usr/share/nginx/node/releases
+  INFO [56cd0b37] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [a0138168] Running [ -f /usr/share/nginx/node/current/REVISION ] as deploy@172.17.0.3
+ DEBUG [a0138168] Command: [ -f /usr/share/nginx/node/current/REVISION ]
+ DEBUG [a0138168] Finished in 0.041 seconds with exit status 1 (failed).
+ DEBUG [68d56e6b] Running [ -f /usr/share/nginx/node/repo/HEAD ] as deploy@172.17.0.3
+ DEBUG [68d56e6b] Command: [ -f /usr/share/nginx/node/repo/HEAD ]
+ DEBUG [68d56e6b] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /usr/share/nginx/node/repo
+ DEBUG [dc53ecc4] Running if test ! -d /usr/share/nginx/node/repo; then echo "Directory does not exist '/usr/share/nginx/node/repo'" 1>&2; false; fi as deploy@172.17.0.3
+ DEBUG [dc53ecc4] Command: if test ! -d /usr/share/nginx/node/repo; then echo "Directory does not exist '/usr/share/nginx/node/repo'" 1>&2; false; fi
+ DEBUG [dc53ecc4] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [66df3d8f] Running /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git as deploy@172.17.0.3
+ DEBUG [66df3d8f] Command: cd /usr/share/nginx/node/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env git remote set-url origin git@github.com:yogesh-sinoriya/capistrano-practice.git )
+  INFO [66df3d8f] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [5fd58552] Running /usr/bin/env git remote update --prune as deploy@172.17.0.3
+ DEBUG [5fd58552] Command: cd /usr/share/nginx/node/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [5fd58552] 	Fetching origin
+  INFO [5fd58552] Finished in 5.259 seconds with exit status 0 (successful).
+ DEBUG [92de451a] Running if test ! -d /usr/share/nginx/node/repo; then echo "Directory does not exist '/usr/share/nginx/node/repo'" 1>&2; false; fi as deploy@172.17.0.3
+ DEBUG [92de451a] Command: if test ! -d /usr/share/nginx/node/repo; then echo "Directory does not exist '/usr/share/nginx/node/repo'" 1>&2; false; fi
+ DEBUG [92de451a] Finished in 0.041 seconds with exit status 0 (successful).
+  INFO [9a1178d8] Running /usr/bin/env mkdir -p /usr/share/nginx/node/releases/20171124093508 as deploy@172.17.0.3
+ DEBUG [9a1178d8] Command: cd /usr/share/nginx/node/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env mkdir -p /usr/share/nginx/node/releases/20171124093508 )
+  INFO [9a1178d8] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [7269d8f4] Running /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /usr/share/nginx/node/releases/20171124093508 as deploy@172.17.0.3
+ DEBUG [7269d8f4] Command: cd /usr/share/nginx/node/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env git archive node-app | /usr/bin/env tar -x -f - -C /usr/share/nginx/node/releases/20171124093508 )
+  INFO [7269d8f4] Finished in 0.047 seconds with exit status 0 (successful).
+ DEBUG [1669b635] Running if test ! -d /usr/share/nginx/node/repo; then echo "Directory does not exist '/usr/share/nginx/node/repo'" 1>&2; false; fi as deploy@172.17.0.3
+ DEBUG [1669b635] Command: if test ! -d /usr/share/nginx/node/repo; then echo "Directory does not exist '/usr/share/nginx/node/repo'" 1>&2; false; fi
+ DEBUG [1669b635] Finished in 0.041 seconds with exit status 0 (successful).
+ DEBUG [c8278a4a] Running /usr/bin/env git rev-list --max-count=1 node-app as deploy@172.17.0.3
+ DEBUG [c8278a4a] Command: cd /usr/share/nginx/node/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano_example-nodeapp-cloud.sh" ; /usr/bin/env git rev-list --max-count=1 node-app )
+ DEBUG [c8278a4a] 	1e283ac30d58543c132650036cfab591b2d33180
+ DEBUG [c8278a4a] Finished in 0.042 seconds with exit status 0 (successful).
+ DEBUG [51fd11b3] Running if test ! -d /usr/share/nginx/node/releases/20171124093508; then echo "Directory does not exist '/usr/share/nginx/node/releases/20171124093508'" 1>&2; false; fi as deploy@172.17.0.3
+ DEBUG [51fd11b3] Command: if test ! -d /usr/share/nginx/node/releases/20171124093508; then echo "Directory does not exist '/usr/share/nginx/node/releases/20171124093508'" 1>&2; false; fi
+ DEBUG [51fd11b3] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [4c0b9be2] Running /usr/bin/env echo "1e283ac30d58543c132650036cfab591b2d33180" >> REVISION as deploy@172.17.0.3
+ DEBUG [4c0b9be2] Command: cd /usr/share/nginx/node/releases/20171124093508 && /usr/bin/env echo "1e283ac30d58543c132650036cfab591b2d33180" >> REVISION
+  INFO [4c0b9be2] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [88a6d8c6] Running if test ! -d /usr/share/nginx/node/releases/20171124093508; then echo "Directory does not exist '/usr/share/nginx/node/releases/20171124093508'" 1>&2; false; fi as deploy@172.17.0.3
+ DEBUG [88a6d8c6] Command: if test ! -d /usr/share/nginx/node/releases/20171124093508; then echo "Directory does not exist '/usr/share/nginx/node/releases/20171124093508'" 1>&2; false; fi
+ DEBUG [88a6d8c6] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [e2c27c52] Running /usr/bin/env npm install --production --silent --no-progress as deploy@172.17.0.3
+ DEBUG [e2c27c52] Command: cd /usr/share/nginx/node/releases/20171124093508 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [e2c27c52] 	/usr/bin/env: npm: No such file or directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-24 15:13:45 +0530 cap nodeapp npm:install
+  INFO ---------------------------------------------------------------------------
+ DEBUG [328f34ae] Running if test ! -d /usr/share/nginx/node/current; then echo "Directory does not exist '/usr/share/nginx/node/current'" 1>&2; false; fi as deploy@172.17.0.3
+ DEBUG [328f34ae] Command: if test ! -d /usr/share/nginx/node/current; then echo "Directory does not exist '/usr/share/nginx/node/current'" 1>&2; false; fi
+ DEBUG [328f34ae] 	Directory does not exist '/usr/share/nginx/node/current'
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-24 15:13:52 +0530 cap nodeapp npm:start
+  INFO ---------------------------------------------------------------------------
+  INFO [e23d54e7] Running cd /home/deploy/dev/nodeapp/current/ && npm start as deploy@172.17.0.3
+ DEBUG [e23d54e7] Command: cd /home/deploy/dev/nodeapp/current/ && npm start
+ DEBUG [e23d54e7] 	bash: line 0: cd: /home/deploy/dev/nodeapp/current/: No such file or directory

@@ -29,7 +29,7 @@ namespace :npm do
 	desc 'Start'
     task :start do
       on roles(:app), in: :groups, limit:1 do
-      	execute "cd /home/deploy/dev/nodeapp/current/ && npm start"
+      	execute "cd /usr/share/nginx/node/ && npm start"
         #execute :npm, :start, fetch(:app_command)
       end
     end
@@ -37,21 +37,21 @@ namespace :npm do
     desc 'Restart'
     task :restart do
       on roles(:app), in: :groups, limit:1 do
-        execute "cd /home/deploy/dev/nodeapp/current/ && npm restart"
+        execute "cd /usr/share/nginx/node/ && npm restart"
         #execute :npm,:restart, fetch(:app_command)
       end
     end
     desc 'Stop'
     task :stop do
       on roles(:app), in: :groups, limit:1 do
-      	execute "cd /home/deploy/dev/nodeapp/current/ && npm stop"
+      	execute "cd /usr/share/nginx/node/ && npm stop"
         #execute :npm, :stop, fetch(:app_command)
       end
     end
     desc 'StopAll'
     task :stopall do
       on roles(:app), in: :groups, limit:1 do
-      	execute "cd /home/deploy/dev/nodeapp/current/ && npm stopall"
+      	execute "cd /usr/share/nginx/node/ && npm stopall"
         #execute :npm, :stop, fetch(:app_command)
       end
     end
